@@ -66,6 +66,7 @@ header button{
     grid-template-columns: 40px 0fr;
     color: #fff;
     transition: grid-template-columns .5s;
+
 }
 
 .sidebar_element p{
@@ -80,6 +81,14 @@ header button{
     width: 100%;
     overflow: hidden;
     justify-self: center;
+}
+
+.sidebar_element:not(.sidebar_icon--user){
+    border: solid 1px #7858a6bb;
+}
+
+.sidebar_icon--user{
+    border-top: solid #7858a6bb 1px;
 }
 
 .sidebar_element:not(.sidebar_element--logo):hover{
