@@ -162,7 +162,6 @@ main{
 
 /*Graficos*/
 .container-graficos .row{
-    border: solid;
     max-width: 100%;
     margin: 50px auto;
 }
