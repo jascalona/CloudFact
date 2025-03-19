@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: blue;
+}
+
+header{
+    width: 100%;
+    height: 65px;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+}
+
+header .logo a img{
+    width: 90px;
+}
+
+header button{
+    border: none;
+    font-size: 20px;
+    background: none;
+}
+
+.sidebar{
+    position: fixed;
+    background: #0d0c2a;
+    width: max-content;
+    padding: 0.5rem 0.5rem;
+    height: 100%;
+}
+
+.sidebar:hover .sidebar_element{
+    grid-template-columns: 40px 1fr;
+}
+
+.sidebar_list{
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.sidebar_element img{
+    width: 30px;
+}
+
+.sidebar_element{
+    padding: .3rem 1rem;
+    border-radius: 3px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 0fr;
+    color: #fff;
+    transition: grid-template-columns .5s;
+}
+
+.sidebar_element p{
+    margin-top: 20px;
+}
+
+.sidebar_icon--logo{
+    max-width: 30px;
+}
+
+.sidebar_icon{
+    width: 100%;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.sidebar_element:not(.sidebar_element--logo):hover{
+    background: #7858A6;
+    cursor: pointer;
+}
+
+.sidebar_element:has(.sidebar_icon--logo){
+    background: #371B58;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/*Oculatr*/
+.sidebar_hide{
+    overflow: hidden;
+}
