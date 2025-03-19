@@ -10,6 +10,7 @@ body{
 }
 
 header{
+    position: absolute;
     width: 100%;
     height: 65px;
     background: #f3f3f3;
@@ -20,7 +21,7 @@ header{
     box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
 }
 
-header .logo a img{
+header .logo img{
     width: 90px;
 }
 
@@ -28,11 +29,12 @@ header button{
     border: none;
     font-size: 20px;
     background: none;
+    margin: 10px;
 }
 
 .sidebar{
     position: fixed;
-    background: #0d0c2a;
+    background: #0e0e16;
     width: max-content;
     padding: 0.5rem 0.5rem;
     height: 100%;
@@ -91,8 +93,85 @@ header button{
     margin-bottom: 30px;
 }
 
-
 /*Oculatr*/
 .sidebar_hide{
     overflow: hidden;
 }
+
+/*SESION MAIN*/
+main{
+    max-width: 90%;
+    margin: 0 10%;
+    padding-top: 50px;
+}
+
+
+/*Primera Parte*/
+.container-das{
+    padding: 50px;
+    background: #f3f3f3;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container-das .user{
+    border: solid  #b8b5b56b 1px;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+
+.container-das img{
+    width: 60px;
+}
+
+.container-das .user{
+    display: flex;
+    align-items: center;
+}
+
+.container-das .user .text{
+    margin: 20px;
+    line-height: 1;
+}
+
+/*status-contratos*/
+.status-contratos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 8px;
+    line-height: 1;
+    align-items: center;
+}
+
+
+.status-contratos article{
+    border: solid 1px #7f7c7c88;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.status-contratos article p i{
+    font-size: 35px;
+    color: #371b58;
+}
+
+/*Graficos*/
+.container-graficos .row{
+    border: solid;
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+.chart{
+    border-radius: 10px;
+    background: #f3f3f3;
+    width: 100%;
+    min-height: 500px;
+}
+
+

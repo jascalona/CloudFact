@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icons/cloud.svg">
     <title>CloudFact</title>
 
 
@@ -17,6 +18,47 @@
 
 <body style="background: #d1d1d1;">
 
+    <header>
+        <div class="logo">
+            <img src="./images/xdv.png" alt="#">
+        </div>
+
+        <div class="icons">
+
+            <button type="button" class="btn btn-dark position-relative" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                <i class='bx bxs-bell-ring'></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Centro de Notificaciones</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modal-->
+
+            <button><i class='bx bx-power-off'></i> </button>
+        </div>
+
+    </header>
 
     <aside class="sidebar">
 
@@ -122,6 +164,62 @@
     </aside>
 
 
+    <main>
+
+        <br><br>
+        <div class="container-das">
+
+            <div class="user">
+                <img src="./images/icons/perfil.png" alt="">
+
+                <div class="text">
+                    <h6>Bienvenido @surname</h6>
+                    <small>Roll de Usuario</small>
+                </div>
+            </div>
+
+            <div class="status-contratos">
+                <article>
+                    <p><i class='bx bxs-user-plus'></i></p>
+                    <small>25</small>
+                </article>
+
+
+                <article>
+                    <p><i class='bx bxs-objects-vertical-bottom'></i></p>
+                    <small>15</small>
+                </article>
+
+
+
+                <article>
+                    <p><i class='bx bxs-cart-add'></i></p>
+                    <small>500</small>
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <div class="container-graficos">
+            <div class="row">
+
+                <div class="col-ms12" col-md6 col-lg-6 col-xl-6>
+                    <div id="chart1" class="chart"></div>
+                </div>
+
+                <div class="col-ms12" col-md6 col-lg-6 col-xl-6>
+                    <div id="chart2" class="chart"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </main>
 
 
 
@@ -130,7 +228,10 @@
 
 
     <!--scripts-->
+    <script src="./JS/main.js"></script>
     <script src="./JS/Bootstrap.js"></script>
+    <script src="./JS/echarts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.6.0/echarts.min.js"></script>
     <!--scripts-->
 
 </body>
