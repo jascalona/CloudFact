@@ -33,6 +33,7 @@ body {
 }
 
 header {
+    position: relative;
     width: 100%;
     height: 65px;
     background: #fff;
@@ -61,8 +62,8 @@ header button {
 /* LAYOUT */
 
 .menu-dashboard {
-    position: absolute;
-    max-width: 150px;
+    position: fixed;
+    max-width: 90px;
     height: 100vh;
     background: var(--bg-menu);
     padding: 20px;
@@ -165,6 +166,7 @@ header button {
     color: #fff;
 }
 
+
 .menu .enlace a {
     text-decoration: none;
     color: #fff;
@@ -201,7 +203,8 @@ header button {
 }
 
 .menu-dashboard.open .menu .enlace {
-    padding: 20px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 .menu-dashboard.open .menu .enlace span {
@@ -209,10 +212,15 @@ header button {
 }
 
 main {
-    max-width: 90%;
-    margin: 0 10%;
+    max-width: 80%;
+    margin: 0 auto;
     padding: 20px;
     text-align: justify;
+    transition: margin-left 0.5s ease;
+}
+
+main.min-main{
+    margin-left: 300px;
 }
 
 .container-top {
