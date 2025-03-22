@@ -1,0 +1,15 @@
+/*Graficos*/
+.container-graficos .row{
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+.chart{
+    border-radius: 10px;
+    background: #fff;
+    width: 100%;
+    min-height: 500px;
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+}
+
+

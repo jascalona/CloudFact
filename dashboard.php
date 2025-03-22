@@ -20,12 +20,12 @@ if (!empty($_SESSION["name"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudFact</title>
 
-
-    <!-- BOX ICONS -->
+    <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="./CSS/daschboard.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/dashboard.css">
     <link rel="stylesheet" href="./CSS/FRAMEWORK/Bootstrap.css">
+    <!--Styles-->
 
 </head>
 
@@ -179,13 +179,29 @@ if (!empty($_SESSION["name"])) {
         </div>
 
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis explicabo quasi iste, obcaecati earum! Voluptate explicabo commodi fuga reiciendis laboriosam modi illum, veniam officiis voluptates atque placeat maiores quod, eos similique, quia minima quae ratione soluta? Saepe consectetur ab excepturi voluptatibus. Dicta aliquid non officiis distinctio, fuga unde voluptate ratione quidem voluptates. Quod magnam eligendi et recusandae cumque culpa, veritatis quis quaerat accusantium in veniam delectus reiciendis vel magni pariatur eum minus officia. Corrupti, esse, quidem ducimus necessitatibus expedita pariatur tenetur nulla recusandae possimus ratione excepturi odit nam. Fuga laboriosam asperiores necessitatibus quasi enim consequuntur voluptate? Nostrum eum quos ut sapiente eius magnam facere, incidunt consequuntur quibusdam vero, repudiandae doloremque error aliquam exercitationem tempore fugiat explicabo quod quisquam aut nam cum! Veniam magni officia voluptatum dolore harum ut rerum eaque placeat molestiae aliquid illum natus, quas minima nostrum, laboriosam ducimus nisi rem veritatis ipsa excepturi at. Aliquid qui debitis atque error nesciunt culpa laboriosam aliquam accusamus ex, provident reiciendis, amet, placeat officiis voluptates cupiditate sint voluptatem perspiciatis nam nihil minus libero corrupti consectetur. Vel voluptates ipsum praesentium voluptatum recusandae id fugiat est quod iste! Voluptatum excepturi amet quia quae quasi, rem autem, soluta blanditiis optio, atque maiores natus quo quam ducimus ab fugiat tenetur? Quidem eius officiis sit sed dolores voluptas alias molestiae quos natus aliquam ad, blanditiis nisi distinctio, consectetur ullam odio iure. Excepturi voluptatibus quidem minus cum vero! Earum sapiente a distinctio, cumque voluptates quis nemo nisi nesciunt, impedit amet quam, illo alias ipsam doloremque magni doloribus porro molestias incidunt eligendi qui quasi commodi quas. Repellendus iste dicta provident eum, veritatis dolor esse odit nihil commodi, reiciendis dolore labore ipsam harum recusandae dignissimos, quaerat tenetur totam delectus quas accusantium repudiandae. Voluptate beatae consequatur et, facere in excepturi optio ipsum nam id perferendis eius voluptatibus eveniet veniam, magnam iste laudantium quos obcaecati vero hic fugit. Blanditiis quasi ullam tempore veritatis, amet labore id doloremque ipsa mollitia provident rem laboriosam totam illo iste, dolor dolores accusantium aut odio minima nihil. Perspiciatis ipsam, mollitia omnis numquam, sapiente, quibusdam illo dolorum nemo fugit ullam quod nesciunt provident aliquid laborum dolores quia hic consectetur ab. Quaerat, doloremque cupiditate aspernatur libero alias aliquam! Minus vitae iste nesciunt inventore temporibus mollitia quibusdam modi ipsa nemo debitis, minima exercitationem voluptate tempora eum voluptas blanditiis ea dolores voluptates perferendis? Illo, vel provident eos animi in accusamus ducimus blanditiis quibusdam officia. Aperiam eum sed illum consectetur ex!
+          <!--GRAFICOS-->
+          <div class="container-graficos">
+            <div class="row my-4">
 
+                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
+                    <div id="chart1" class="chart"></div>
+                </div>
+
+                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
+                    <div id="chart2" class="chart"></div>
+                </div>
+
+            </div>
+        </div>
+        <!--GRAFICOS-->
+        
     </main>
 
 
     <!--SCRIPTS-->
     <script src="./js/app.js" defer></script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/echarts.js"></script>
     <script src="./JS/Bootstrap.js"></script>
     <!--SCRIPTS-->
 </body>
