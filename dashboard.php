@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!empty($_SESSION["name"])) {
+    header('');
+} else {
+    if (
+        (time()- $_SESSION['time']) > 100
+    ) {
+        header("Location: ./log.php");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,8 +91,8 @@
             <img src="./images/icons/perfil.png" alt="">
             <br>
             <div class="text">
-                <span>Jose Escalona</span>
-                <small>nameuser@gmail.com</small>
+                <span><?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?></span><br>
+                <small><?php echo $_SESSION['email']; ?></small>
             </div>
         </div>
         <!-- MENU -->
@@ -122,7 +135,7 @@
         <div class="container-top">
 
             <div class="title-top">
-                <h6>Benvenido @jescalona</h6>
+                <h6>Benvenid@ <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?></h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
 
