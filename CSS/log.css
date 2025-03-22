@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1496347646636-ea47f7d6b37b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.container-log{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 50px;
+    border-radius: 10px;
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);   
+    text-align: center;
+}
+
+.container-log i{
+    font-size: 120px;
+    padding: 20px;
+}
+
+.container-log .title h3{
+    font-size: 30px;
+    color: #fff;
+}
+
+.formulario-log input{
+    padding:  12px;
+    border: solid 1px #00aed3;
+    border-radius: 5px;
+    width: 80%;
+    margin: 3px auto;
+    box-shadow: 0 1px 10px rgba(66, 5, 163, 0.446);
+}
+
+.formulario-log {
+    margin-bottom: 30px;
+}
+
+.container-log .btn button{
+    border: none;
+    border-radius: 8px;
+    background: #00f6ff;
+    padding: 8px;
+    color: #002134;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    main .container-log{
+        width: 95%;
+        margin: 20% auto;
+        height: auto;
+    }
+
+    .container-log .title p{
+        font-size: 15px;
+    }
+
+    main .formulario-log{
+        padding: none;
+        width: 100%;
+        margin: 20px auto;
+        padding: 0;
+    }
+    .formulario-log input{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
