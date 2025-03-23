@@ -156,6 +156,7 @@ header button {
 .menu .enlace {
     width: 100%;
     padding: 10px 0 10px 15px;
+    border: solid 1px #00f7ff64;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -273,8 +274,6 @@ main.min-main{
 
 }
 
-
-
 /*SIZE RESPONSIVE CARDS*/
 @media (min-width: 992px) {
     .componets-card {
@@ -300,3 +299,4 @@ main.min-main{
     }
 
 }
+

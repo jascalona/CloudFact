@@ -1,0 +1,39 @@
+.componets-card-customer{
+    display: grid;
+    padding: 2%;
+    gap: 4%;
+}
+
+.card-customer{
+    max-width: 400px;
+    min-height: 200px;
+    padding: 20px 35px;
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+    line-height: 1.7;
+}
+
+
+
+/*SIZE RESPONSIVE CARDS*/
+@media (min-width: 992px) {
+    .componets-card-customer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .componets-card-customer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 499px) {
+
+    .componets-card-customer {
+        grid-template-columns: 1fr;
+        gap: 1%;
+
+    }
+}
