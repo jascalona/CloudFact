@@ -2,6 +2,9 @@
     display: grid;
     padding: 2%;
     gap: 4%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 90px 60px;
 }
 
 .card-customer{
@@ -9,10 +12,26 @@
     min-height: 200px;
     padding: 20px 35px;
     box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+    border-radius: 8px;
     line-height: 1.7;
+    background: #fff;
 }
 
+.card-customer span{
+    font-size: 20px;
+}
 
+.card-customer .content{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.card-customer .content i{
+    font-size: 50px;
+}
 
 /*SIZE RESPONSIVE CARDS*/
 @media (min-width: 992px) {
@@ -26,7 +45,6 @@
     .componets-card-customer {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (max-width: 499px) {
@@ -36,4 +54,63 @@
         gap: 1%;
 
     }
+}
+
+
+/*ICON SEARCH*/
+.search{
+	position: absolute;
+	left: 25%;
+	top: 35%;
+	transform: translate(-50%,-50%);
+	padding: 8px;
+}
+
+.search input {
+	outline: none;
+	box-sizing: border-box;
+	height: 60px;
+	width: 0px;
+	padding: 0 20px;
+	color: #000;
+	border-radius: 50px;
+	font-size: 20px;
+	border: 1px solid #D50000;
+	transition: all .7s ease;
+}
+
+::placeholder {
+	color: grey;
+}
+
+.btn-show {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 80px;
+	height: 80px;
+	background: #D50000;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.btn-show i {
+	font-size: 25px;
+	color: white;
+	line-height: 80px;
+	transition: all .7s ease;
+}
+
+.search input {
+	width: 300px;
+}
+
+.search:hover i{
+	transform: rotate(-360deg);
+}
+
+.btn-show:hover{
+	background: #cc0000;
 }

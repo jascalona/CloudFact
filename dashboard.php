@@ -29,7 +29,7 @@ if (!empty($_SESSION["name"])) {
 
 </head>
 
-<body style="background-color: rgba(241, 237, 237, 0.732);">
+<body style="background-color: rgba(208, 218, 237, 0.296);">
 
     <header>
 
