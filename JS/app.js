@@ -2,7 +2,7 @@ const toggle = document.querySelector(".toggle")
 const menuDashboard = document.querySelector(".menu-dashboard")
 const iconoMenu = toggle.querySelector("i")
 const enlacesMenu = document.querySelectorAll(".enlace")
-const main = document.querySelector("main");
+const main = document.querySelector(".main");
 
 toggle.addEventListener("click", () => {
     menuDashboard.classList.toggle("open");

@@ -76,7 +76,7 @@
         </div>
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
-            <img src="../images/icons/perfil.png" alt="">
+            <img src="./images/icons/perfil.png" alt="">
             <br>
             <div class="text">
                 <span>
@@ -91,19 +91,33 @@
         <div class="menu">
             <div class="enlace">
                 <i class='bx bxs-dashboard'></i>
-                <a href="../dashboard.php"><span>Panel</span></a>
+                <a href="./dashboard.php"><span>Panel</span></a>
             </div>
 
             <div class="enlace">
                 <i class="bx bx-printer"></i>
-                <a href=""><span>Parque</span></a>
+                <a href="./parck.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">
-                <i class='bx bxs-credit-card'></i>
-                <a href=""><span>Facturacion</span></a>
+                <i class='bx bx-barcode-reader'></i>
+                <a href=""><span>Lectura</span></a>
             </div>
 
+            <div class="enlace">
+                <i class='bx bx-data'></i>
+                <a href="./install.html"><span>Instalaciones</span></a>
+            </div>
+
+            <div class="enlace">
+                <i class='bx bx-message-square-x'></i>
+                <a href=""><span>Desincorporación</span></a>
+            </div>
+
+            <div class="enlace">
+                <i class='bx bx-folder-minus'></i>
+                <a href=""><span>Contratos</span></a>
+            </div>
 
         </div>
     </nav>
@@ -167,7 +181,7 @@
 
             <div class="title-top">
                 <h6>Benvenid@
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?>
+                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                 </h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>

@@ -4,7 +4,7 @@ if (!empty($_SESSION["name"])) {
     header('');
 } else {
     if (
-        (time()- $_SESSION['time']) > 100
+        (time() - $_SESSION['time']) > 100
     ) {
         header("Location: ./log.php");
     }
@@ -22,6 +22,7 @@ if (!empty($_SESSION["name"])) {
 
     <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/Maquetado.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/dashboard.css">
     <link rel="stylesheet" href="./CSS/FRAMEWORK/Bootstrap.css">
@@ -76,7 +77,8 @@ if (!empty($_SESSION["name"])) {
         </div>
     </header>
 
-    <div class="menu-dashboard">
+
+    <nav class="menu-dashboard">
         <!-- TOP MENU -->
         <div class="top-menu">
 
@@ -91,8 +93,12 @@ if (!empty($_SESSION["name"])) {
             <img src="./images/icons/perfil.png" alt="">
             <br>
             <div class="text">
-                <span><?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?></span><br>
-                <small><?php echo $_SESSION['email']; ?></small>
+                <span>
+                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
+                </span><br>
+                <small>
+                    <?php echo $_SESSION['email']; ?>
+                </small>
             </div>
         </div>
         <!-- MENU -->
@@ -128,14 +134,16 @@ if (!empty($_SESSION["name"])) {
             </div>
 
         </div>
-    </div>
+    </nav>
 
 
-    <main class="main" id="main">
+    <article class="main" id="main">
         <div class="container-top">
 
             <div class="title-top">
-                <h6>Benvenid@ <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?></h6>
+                <h6>Benvenid@
+                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
+                </h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
 
@@ -157,7 +165,7 @@ if (!empty($_SESSION["name"])) {
                     <small>Clientes</small>
                     <div class="content">
                         <span>100</span>
-                        <i class='bx bx-user' style='color:#002134'  ></i>
+                        <i class='bx bx-user' style='color:#002134'></i>
                     </div>
                     <small>comentario</small>
                 </div>
@@ -179,8 +187,8 @@ if (!empty($_SESSION["name"])) {
         </div>
 
 
-          <!--GRAFICOS-->
-          <div class="container-graficos">
+        <!--GRAFICOS-->
+        <div class="container-graficos">
             <div class="row my-4">
 
                 <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
@@ -194,8 +202,8 @@ if (!empty($_SESSION["name"])) {
             </div>
         </div>
         <!--GRAFICOS-->
-        
-    </main>
+
+    </article>
 
 
     <!--SCRIPTS-->

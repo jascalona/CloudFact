@@ -4,7 +4,7 @@ if (!empty($_SESSION["name"])) {
     header('');
 } else {
     if (
-        (time()- $_SESSION['time']) > 100
+        (time() - $_SESSION['time']) > 100
     ) {
         header("Location: ./log.php");
     }
@@ -93,7 +93,7 @@ if (!empty($_SESSION["name"])) {
             <br>
             <div class="text">
                 <span>
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?>
+                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                 </span><br>
                 <small>
                     <?php echo $_SESSION['email']; ?>
@@ -136,12 +136,12 @@ if (!empty($_SESSION["name"])) {
     </div>
 
 
-    <main class="main" id="main">
+    <article class="main" id="main">
         <div class="container-top">
 
             <div class="title-top">
                 <h6>Benvenid@
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?>
+                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                 </h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
@@ -311,7 +311,7 @@ if (!empty($_SESSION["name"])) {
         </div>
 
 
-    </main>
+    </article>
 
 
     <!--SCRIPTS-->

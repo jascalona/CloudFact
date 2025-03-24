@@ -212,17 +212,17 @@ header button {
     opacity: 1;
 }
 
-main {
+article {
     position: relative;
-    max-width: 80%;
+    max-width: 1300px;
     margin:  0 auto;
     padding: 20px;
     padding-top: 75px;
-    text-align: justify;
+    text-align: justify;    
     transition: margin-left 0.5s ease;
 }
 
-.min-main{
+article.min-main{
     margin-left: 300px;
 }
 
