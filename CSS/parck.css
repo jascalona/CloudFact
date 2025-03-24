@@ -8,8 +8,8 @@
 }
 
 .card-customer{
-    max-width: 400px;
-    min-height: 200px;
+    min-width: 400px;
+    max-width: 5000px;
     padding: 20px 35px;
     box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
     border-radius: 8px;
@@ -20,6 +20,7 @@
 .card-customer span{
     font-size: 20px;
 }
+
 
 .card-customer .content{
     font-size: 16px;
@@ -33,17 +34,22 @@
     font-size: 50px;
 }
 
+.card-customer .content img{
+    width: 70px;
+    float: right;
+}
+
 /*SIZE RESPONSIVE CARDS*/
 @media (min-width: 992px) {
     .componets-card-customer {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 991px) {
 
     .componets-card-customer {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 2, 1fr;
     }
 }
 
