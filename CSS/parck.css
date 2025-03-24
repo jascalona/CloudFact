@@ -103,6 +103,8 @@
 table {
     max-width: 100%;
     margin: 0 auto;
+    border: solid 1px #00acd333;
+
 }
 
 table thead {
@@ -128,12 +130,20 @@ table tbody tr td {
     padding: 30px;
 }
 
+.container-table .head-t{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    border-bottom: solid 1px #00acd333;
+    margin-bottom: 30px;
+}
+
+
 .container-table p {
     color: #00445f;
     font-size: 27px;
     font-weight: 600;
-    padding: 8px 20px;
-    border-bottom: solid 1px #00acd333;
 }
 
 /*Filas Impares*/
@@ -146,6 +156,12 @@ table tr:nth-child(odd) td {
 /*Filas Pares*/
 table tr:nth-child(even) td {
     background: #cad4e398;
+}
+
+.icons-pages{
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: solid 1px #00acd333;
 }
 
 .icons-pages button{
