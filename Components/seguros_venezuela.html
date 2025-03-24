@@ -134,8 +134,10 @@ if (!empty($_SESSION["name"])) {
 
         </div>
 
-        
-            <!--cards-->
+
+        <!--cards-->
+        <div class="container-resumen">
+
             <div class="componets-card-resumen">
 
                 <div class="card-resumen">
@@ -149,24 +151,75 @@ if (!empty($_SESSION["name"])) {
                     <small>MFP & Printer</small>
                 </div>
 
-                
+
                 <div class="card-resumen">
                     <span><b>Precio Bs</b></span>
                     <br>
                     <small>Equipos B/N</small>
                     <div class="content">
                         <span>1.5</span>
-                        <i class='bx bxs-bank'style='color:#002134'></i>
+                        <i class='bx bxs-bank' style='color:#002134'></i>
                     </div>
                     <small>Costo Imp. B/N</small>
                 </div>
 
-                <div class="row-data">
-                    agsgfa
-                </div>
-
             </div>
-            <!--cards-->
+
+            <!--Group List-->
+            <div class="row-data">
+                <div class="list-group">
+
+                    <!--LIST BN-->
+                    <a href="#" class="list-group-item list-group-item-action" id="BN" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Precio B/N $</h5>
+                            <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">Precio por Click B/N USD.</p>
+                        <small>Equipos MFP & Printer.</small>
+                    </a>
+
+
+                    <a href="#" class="list-group-item list-group-item-action" id="color">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Precio Color $</h5>
+                            <small class="text-body-secondary">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Precio por Click Color USD.</p>
+                        <small class="text-body-secondary">Equipos MFP & Printer.</small>
+                    </a>
+                    <!--LIST BN-->
+
+
+                    <!--LIST COLOR-->
+                    <a href="#" class="list-group-item list-group-item-action" id="BN">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Precio B/N Bs</h5>
+                            <small class="text-body-secondary">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Precio por Click B/N Bs.</p>
+                        <small class="text-body-secondary">Equipos MFP & Printer.</small>
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action" id="color">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Precio Color Bs</h5>
+                            <small class="text-body-secondary">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Precio por Click Color Bs.</p>
+                        <small class="text-body-secondary">Equipos MFP & Printer.</small>
+                    </a>
+                    <!--LIST COLOR-->
+
+                </div>
+            </div>
+
+
+        </div>
+        <!--Group List-->
+        <!--cards-->
+
+
 
         <!--SEARCH-->
         <!-- start search filter -->
