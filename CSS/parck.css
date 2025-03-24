@@ -1,4 +1,4 @@
-.componets-card-customer{
+.componets-card-customer {
     display: grid;
     padding: 2%;
     gap: 4%;
@@ -7,7 +7,7 @@
     padding: 90px 60px;
 }
 
-.card-customer{
+.card-customer {
     min-width: 400px;
     max-width: 5000px;
     padding: 20px 35px;
@@ -17,12 +17,12 @@
     background: #fff;
 }
 
-.card-customer span{
+.card-customer span {
     font-size: 20px;
 }
 
 
-.card-customer .content{
+.card-customer .content {
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -30,11 +30,11 @@
     margin: 20px;
 }
 
-.card-customer .content i{
+.card-customer .content i {
     font-size: 50px;
 }
 
-.card-customer .content img{
+.card-customer .content img {
     width: 70px;
     float: right;
 }
@@ -64,15 +64,13 @@
 
 
 /*ICON SEARCH*/
-.search{
+.search {
     width: 450px;
     max-width: 100%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
 }
 
-.search input{
+.search input {
     height: 55px;
     width: 100%;
     border-radius: 30px;
@@ -80,5 +78,88 @@
     padding-left: 25px;
 }
 
-::placeholder{
+/*ICON SEARCH*/
+
+
+/*SEARCH-PARK*/
+.search-park {
+    max-width: 700px;
+    margin: 5% auto;
+    align-items: center;
 }
+
+.search-park input {
+    height: 55px;
+    width: 100%;
+    border-radius: 30px;
+    border: solid 1px #007295;
+    padding-left: 25px;
+}
+
+/*SEARCH-PARK*/
+
+
+/*TABLE PARK*/
+table {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+table thead {
+    height: 60px;
+    line-height: 50px;
+
+}
+
+table tbody tr {
+    height: 80px;
+    line-height: 50px;
+}
+
+table tbody tr td {
+    font-size: 14px;
+}
+
+.container-table {
+    background: #a4b4fa2f;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.container-table p {
+    color: #00445f;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-bottom: solid 1px #00acd333;
+}
+
+/*Filas Impares*/
+table tr:nth-child(odd) td {
+    background: #eef0f398;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+}
+
+/*Filas Pares*/
+table tr:nth-child(even) td {
+    background: #cad4e398;
+}
+
+.icons-pages button{
+    background: none;
+    border: solid 1px #00445f;
+    border-radius: 50%;
+    margin: 10px 8px;
+}
+
+.icons-pages i{
+    font-size: 30px;
+    color: #00445f;
+}
+
+
+
+/*TABLE PARK*/
