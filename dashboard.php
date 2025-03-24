@@ -104,7 +104,7 @@ if (!empty($_SESSION["name"])) {
 
             <div class="enlace">
                 <i class="bx bx-printer"></i>
-                <a href="./parck.html"><span>Parque</span></a>
+                <a href="./parck.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">

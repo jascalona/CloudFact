@@ -171,7 +171,7 @@ if (!empty($_SESSION["name"])) {
                     <br>
                     <small>J-0191765552-2</small>
                     <div class="content">
-                        <a href="./Components/seguros_venezuela.html"><i class='bx bx-error-circle'></i></a>
+                        <a href="./Components/seguros_venezuela.php"><i class='bx bx-error-circle'></i></a>
                         <img src="https://images.contactout.com/companies/1fce909f06b86d437680e5625a6a9867" alt="">
                     </div>
                     <div class="viw">
