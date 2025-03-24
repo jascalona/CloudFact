@@ -65,7 +65,7 @@
 /*--SECTION CUSTOMERS-------------------------*/
 
 .container-resumen{
-    max-width: 1300px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
 }
@@ -114,7 +114,7 @@
 /*SIZE RESPONSIVE CARDS*/
 @media (min-width: 992px) {
     .componets-card-resumen {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

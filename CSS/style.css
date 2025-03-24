@@ -214,7 +214,7 @@ header button {
 
 main {
     position: relative;
-    max-width: 1300px;
+    max-width: 80%;
     margin:  0 auto;
     padding: 20px;
     padding-top: 75px;
@@ -222,7 +222,7 @@ main {
     transition: margin-left 0.5s ease;
 }
 
-main.min-main{
+.min-main{
     margin-left: 300px;
 }
 

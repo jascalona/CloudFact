@@ -1,36 +1,18 @@
-<?php
-session_start();
-if (!empty($_SESSION["name"])) {
-    header('');
-} else {
-    if (
-        (time()- $_SESSION['time']) > 100
-    ) {
-        header("Location: ../log.php");
-    }
-}
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudFact-Park-Customer</title>
-
-    <!--Styles-->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/parck.css">
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="./CSS/FRAMEWORK/Bootstrap.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../CSS/Maquetado.css">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/parck.css">
-    <link rel="stylesheet" href="../CSS/dashboard.css">
-    <link rel="stylesheet" href="../CSS/FRAMEWORK/Bootstrap.css">
-    <!--Styles-->
 
+    <title>Proyecto 01</title>
 </head>
-
 
 <body class="grid-container" style="background-color: rgba(208, 218, 237, 0.296);">
 
@@ -173,15 +155,10 @@ if (!empty($_SESSION["name"])) {
                     <p class="mb-1">Precio por Click Color Bs.</p>
                     <small class="text-body-secondary">Equipos MFP & Printer.</small>
                 </a>
-
-
                 <!--LIST COLOR-->
 
             </div>
         </div>
-
-
-
     </aside>
 
 
@@ -195,153 +172,67 @@ if (!empty($_SESSION["name"])) {
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
 
-        </div>
+            <!--cards-->
+            <div class="componets-card">
 
-
-        <!--cards-->
-        <div class="container-resumen">
-
-            <div class="componets-card-resumen">
-
-                <div class="card-resumen">
-                    <span><b>Equipos</b></span>
-                    <br>
-                    <small>Catidad de Equipos</small>
+                <div class="card">
+                    <span><b>Ventas</b></span>
+                    <small>Numero de Ventas</small>
                     <div class="content">
                         <span>1.200</span>
-                        <i class='bx bx-printer' style='color:#002134'></i>
+                        <i class='bx bx-credit-card-alt' style='color:#002134'></i>
                     </div>
-                    <small>MFP & Printer</small>
+                    <small>comentario</small>
                 </div>
 
-                <div class="card-resumen">
-                    <span><b>Precio Bs</b></span>
-                    <br>
-                    <small>Equipos B/N</small>
+                <div class="card">
+                    <span><b>Contrato SGD</b></span>
+                    <small>Clientes</small>
                     <div class="content">
-                        <span>1.5</span>
-                        <i class='bx bxs-bank' style='color:#002134'></i>
+                        <span>100</span>
+                        <i class='bx bx-user' style='color:#002134'></i>
                     </div>
-                    <small>Costo Imp. B/N</small>
+                    <small>comentario</small>
                 </div>
 
-                <div class="card-resumen">
-                    <span><b>Precio Bs</b></span>
-                    <br>
-                    <small>Equipos B/N</small>
+                <div class="card">
+                    <span><b>Otro grafico</b></span>
+                    <small>Numero de Ventas</small>
                     <div class="content">
-                        <span>1.5</span>
-                        <i class='bx bxs-bank' style='color:#002134'></i>
+                        <span>100</span>
+                        <i class='bx bx-credit-card-alt' style='color:#002134'></i>
                     </div>
-                    <small>Costo Imp. B/N</small>
+                    <small>comentario</small>
+                </div>
+
+
+            </div>
+            <!--cards-->
+
+        </div>
+
+
+        <!--GRAFICOS-->
+        <div class="container-graficos">
+            <div class="row my-4">
+
+                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
+                    <div id="chart1" class="chart"></div>
+                </div>
+
+                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
+                    <div id="chart2" class="chart"></div>
                 </div>
 
             </div>
         </div>
-
-
-        <!--table-park-->
-        <!--Include Controller-->
-        <div class="container-table">
-            <div class="head-t">
-                <p>Customer's: <small>Seguros Venezuela</small></p> <br>
-
-                <!--SEARCH-->
-                <!-- start search filter -->
-                <div class="search-park" data-aos="fade-up" data-aos-duration="1000" id="search">
-                    <div class="container">
-                        <form class="">
-                            <input class="form-control me-2 light-table-filter" data-table="table" type="text"
-                                placeholder="Search...">
-                        </form>
-                    </div>
-                </div>
-                <!-- end search filter -->
-                <!--SEARCH-->
-
-                <span>Cantidad de Registros: <b>4</b></span>
-            </div>
-
-            <table class="table">
-
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-
-                    <tr>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-            <div class="icons-pages">
-                <button><i class='bx bx-chevron-left'></i></button>
-                <button><i class='bx bx-chevron-right'></i></button>
-            </div>
-
-        </div>
-        <!--table-park-->
-
-
-
+        <!--GRAFICOS-->
 
     </article>
 
 
 
     <footer class="footer">FOOTER</footer>
-
-
-
-    <!--SCRIPTS-->
-    <script src="../JS/app.js"></script>
-    <script src="../JS/main.js"></script>
-    <script src="../JS/echarts.js"></script>
-    <script src="../JS/Bootstrap.js"></script>
-    <!--SCRIPTS-->
 </body>
 
 </html>

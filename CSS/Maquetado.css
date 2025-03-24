@@ -1,0 +1,64 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template:
+        "header" 200px
+        "menu-dashboard" 50px
+        "main" 100px
+        "sidebar" 200px
+        "footer";
+
+    .header {
+        grid-area: header;
+        background-color: #fff;
+    }
+
+    .menu-dashboard {
+        grid-area: menu-dashboard;
+        background-color: #002134;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: rgba(237, 123, 67, 0.74);
+    }
+
+    @media (min-width:768px) {
+        grid-template:
+            "header navbar" 50px
+            "header menu-dashboard" 50px
+            "sidebar main" auto
+            "footer footer" 100px/
+            200px auto;
+            
+    }
+    @media (min-width:992px) {
+        grid-template:
+            "header header header" 100px
+            "menu-dashboard main sidebar" auto 
+            "footer footer footer" 100px/
+            100px auto 350px;
+            
+    }
+}
