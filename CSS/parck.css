@@ -144,13 +144,25 @@
     padding-right: 40px;
 }
 
+.row-data h4{
+    text-align: center;
+    padding: 5px;
+    border-bottom: solid 1px #00acd333;
+    font-weight: 800;
+    font-size: 20px;
+}
+
 .list-group a{
     margin: 10px;
     border-radius: 20px;
     font-size: 13px;
 }
 
-#BN{
+.list-group small{
+    color: #fff;
+}
+
+#BN {
     background: rgb(53, 53, 53);
     color: #fff;
 }
@@ -181,8 +193,8 @@
 
 /*SEARCH-PARK*/
 .search-park {
-    max-width: 700px;
-    margin: 20px auto;
+    max-width: 600px;
+    margin: 50px auto;
     align-items: center;
 }
 
@@ -196,9 +208,7 @@
 
 /*SEARCH-PARK*/
 
-
-
-
+/*TABLES*/
 .container-table {
     max-width: 1300px;
     margin: 0 auto;
