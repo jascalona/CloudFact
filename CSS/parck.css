@@ -59,58 +59,20 @@
 
 /*ICON SEARCH*/
 .search{
-	position: absolute;
-	left: 25%;
-	top: 35%;
-	transform: translate(-50%,-50%);
-	padding: 8px;
+    width: 450px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
-.search input {
-	outline: none;
-	box-sizing: border-box;
-	height: 60px;
-	width: 0px;
-	padding: 0 20px;
-	color: #000;
-	border-radius: 50px;
-	font-size: 20px;
-	border: 1px solid #D50000;
-	transition: all .7s ease;
+.search input{
+    height: 55px;
+    width: 100%;
+    border-radius: 30px;
+    border: solid 1px #007295;
+    padding-left: 25px;
 }
 
-::placeholder {
-	color: grey;
-}
-
-.btn-show {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 80px;
-	height: 80px;
-	background: #D50000;
-	border-radius: 50%;
-	text-align: center;
-	cursor: pointer;
-	transition: .5s;
-}
-
-.btn-show i {
-	font-size: 25px;
-	color: white;
-	line-height: 80px;
-	transition: all .7s ease;
-}
-
-.search input {
-	width: 300px;
-}
-
-.search:hover i{
-	transform: rotate(-360deg);
-}
-
-.btn-show:hover{
-	background: #cc0000;
+::placeholder{
 }
