@@ -4,7 +4,7 @@ if (!empty($_SESSION["name"])) {
     header('');
 } else {
     if (
-        (time()- $_SESSION['time']) > 100
+        (time() - $_SESSION['time']) > 100
     ) {
         header("Location: ../log.php");
     }
@@ -98,7 +98,7 @@ if (!empty($_SESSION["name"])) {
             <br>
             <div class="text">
                 <span>
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?>
+                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                 </span><br>
                 <small>
                     <?php echo $_SESSION['email']; ?>
@@ -107,21 +107,35 @@ if (!empty($_SESSION["name"])) {
         </div>
         <!-- MENU -->
         <div class="menu">
-            <div class="enlace">
+        <div class="enlace">
                 <i class='bx bxs-dashboard'></i>
                 <a href="../dashboard.php"><span>Panel</span></a>
             </div>
 
             <div class="enlace">
                 <i class="bx bx-printer"></i>
-                <a href=""><span>Parque</span></a>
+                <a href="../parck.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">
-                <i class='bx bxs-credit-card'></i>
-                <a href=""><span>Facturacion</span></a>
+                <i class='bx bx-barcode-reader'></i>
+                <a href=""><span>Lectura</span></a>
             </div>
 
+            <div class="enlace">
+                <i class='bx bx-data'></i>
+                <a href="../install.html"><span>Instalaciones</span></a>
+            </div>
+
+            <div class="enlace">
+                <i class='bx bx-message-square-x'></i>
+                <a href=""><span>Desincorporación</span></a>
+            </div>
+
+            <div class="enlace">
+                <i class='bx bx-folder-minus'></i>
+                <a href=""><span>Contratos</span></a>
+            </div>
 
         </div>
     </nav>
@@ -173,30 +187,10 @@ if (!empty($_SESSION["name"])) {
                     <p class="mb-1">Precio por Click Color Bs.</p>
                     <small class="text-body-secondary">Equipos MFP & Printer.</small>
                 </a>
-
-
                 <!--LIST COLOR-->
 
             </div>
         </div>
-
-
-
-    </aside>
-
-
-    <article class="main">
-        <div class="container-top">
-
-            <div class="title-top">
-                <h6>Benvenid@
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname'];?>
-                </h6>
-                <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
-            </div>
-
-        </div>
-
 
         <!--cards-->
         <div class="container-resumen">
@@ -225,19 +219,41 @@ if (!empty($_SESSION["name"])) {
                     <small>Costo Imp. B/N</small>
                 </div>
 
-                <div class="card-resumen">
-                    <span><b>Precio Bs</b></span>
-                    <br>
-                    <small>Equipos B/N</small>
-                    <div class="content">
-                        <span>1.5</span>
-                        <i class='bx bxs-bank' style='color:#002134'></i>
-                    </div>
-                    <small>Costo Imp. B/N</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <article class="main">
+        <div class="container-top">
+
+            <div class="title-top">
+                <h6>Benvenid@
+                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
+                </h6>
+                <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
+            </div>
+
+        </div>
+
+
+
+        <!--GRAFICOS-->
+        <div class="container-graficos">
+            <div class="row my-4">
+
+                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
+                    <div id="chart1" class="chart"></div>
+                </div>
+
+                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
+                    <div id="chart2" class="chart"></div>
                 </div>
 
             </div>
         </div>
+        <!--GRAFICOS-->
 
 
         <!--table-park-->
@@ -326,14 +342,13 @@ if (!empty($_SESSION["name"])) {
         <!--table-park-->
 
 
-
-
     </article>
 
 
 
+    <!--
     <footer class="footer">FOOTER</footer>
-
+    -->
 
 
     <!--SCRIPTS-->

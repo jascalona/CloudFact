@@ -140,7 +140,7 @@ if (!empty($_SESSION["name"])) {
     <article class="main" id="main">
         <div class="container-top">
 
-            <div class="title-top">
+            <div style="padding-top: 70px;" class="title-top">
                 <h6>Benvenid@
                     <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                 </h6>

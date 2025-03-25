@@ -22,6 +22,7 @@ if (!empty($_SESSION["name"])) {
 
     <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/Maquetado.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/parck.css">
     <link rel="stylesheet" href="./CSS/dashboard.css">
@@ -30,7 +31,7 @@ if (!empty($_SESSION["name"])) {
 
 </head>
 
-<body style="background-color: rgba(208, 218, 237, 0.296);">
+<body class="grip-container" style="background-color: rgba(208, 218, 237, 0.296);">
 
     <header>
 
@@ -77,7 +78,7 @@ if (!empty($_SESSION["name"])) {
         </div>
     </header>
 
-    <div class="menu-dashboard">
+    <nav class="menu-dashboard">
         <!-- TOP MENU -->
         <div class="top-menu">
 
@@ -133,13 +134,13 @@ if (!empty($_SESSION["name"])) {
             </div>
 
         </div>
-    </div>
+    </nav>
 
 
     <article class="main" id="main">
         <div class="container-top">
 
-            <div class="title-top">
+            <div style="padding-top: 70px;" class="title-top">
                 <h6>Benvenid@
                     <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                 </h6>

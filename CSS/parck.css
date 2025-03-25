@@ -77,12 +77,13 @@
     gap: 4%;
     max-width: 100%;
     margin: 20px auto;
-    padding: 90px 60px;
+    padding: 40px;
     border-radius: 40px;
+    background: #00acd333;
 }
 
 .card-resumen {
-    width: 350px;
+    width: 250px;
     padding: 20px 35px;
     box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
     border-radius: 8px;
@@ -114,14 +115,14 @@
 /*SIZE RESPONSIVE CARDS*/
 @media (min-width: 992px) {
     .componets-card-resumen {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media (max-width: 991px) {
 
     .componets-card-resumen {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -138,10 +139,12 @@
 /*LIST STYLE*/
 .row-data{
     width: 330px;
+    margin: 0 auto;
     background: #fff;
     border-radius: 30px;
     padding: 20px;
     padding-right: 40px;
+    margin-top: 160px;
 }
 
 .row-data h4{
