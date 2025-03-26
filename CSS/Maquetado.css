@@ -55,7 +55,7 @@ body {
     @media (min-width:992px) {
         grid-template:
             "header header header" 100px
-            "menu-dashboard main sidebar" auto 
+            "menu-dashboard main main" auto 
             "footer footer footer" 100px/
             0px auto 400px;
             

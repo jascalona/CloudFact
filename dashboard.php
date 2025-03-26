@@ -107,15 +107,15 @@ if (!empty($_SESSION["name"])) {
                 <i class='bx bxs-dashboard'></i>
                 <a href="./dashboard.php"><span>Panel</span></a>
             </div>
-
+            
             <div class="enlace">
-                <i class="bx bx-printer"></i>
-                <a href="./parck.php"><span>Parque</span></a>
+                <i class='bx bx-barcode-reader'></i>
+                <a href="./client_reading.php"><span>Lecturas</span></a>
             </div>
 
             <div class="enlace">
-                <i class='bx bx-barcode-reader'></i>
-                <a href=""><span>Lectura</span></a>
+                <i class='bx bx-printer'></i>
+                <a href="./parck.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">

@@ -144,7 +144,6 @@
     border-radius: 30px;
     padding: 20px;
     padding-right: 40px;
-    margin-top: 160px;
 }
 
 .row-data h4{
@@ -213,7 +212,7 @@
 
 /*TABLES*/
 .container-table {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
     background: #a4b4fa2f;
     backdrop-filter: blur(0.4rem);
@@ -296,13 +295,13 @@ table tr:nth-child(even) td {
 }
 
 .icons-pages{
-    margin-top: 30px;
-    padding-top: 10px;
-    border-top: solid 1px #00acd333;
+    display: flex;
+    justify-content: end;
 }
 
 .icons-pages button{
     background: none;
+    padding: 8px;
     border: solid 1px #00445f;
     border-radius: 50%;
     margin: 10px 5px;
@@ -317,7 +316,52 @@ table tr:nth-child(even) td {
     font-size: 30px;
     color: #00445f;
 }
-
-
-
 /*TABLE PARK*/
+
+
+/*CONTAINER-PUBLIC*/
+.container-graficos{
+    background: #00acd31c;
+    border-radius: 20px;
+    display: grid;
+    padding: 50px;
+    gap: 4%;
+    margin-bottom: 30px;
+}
+
+/*Graficos*/
+.container-graficos .row{
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+.chart{
+    border-radius: 10px;
+    background: #fff;
+    width: 400px;
+    min-height: 400px;
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+}
+
+
+
+
+
+@media (min-width: 992px) {
+    .container-graficos{
+        grid-template-columns: repeat(3, 1fr);
+    }    
+}
+
+@media (max-width: 991px) {
+    .container-graficos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 449px) {
+    .container-public{
+        grid-template-columns: 1fr;
+        gap: 1%;
+    }
+}

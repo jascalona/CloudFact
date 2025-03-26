@@ -25,7 +25,6 @@ if (!empty($_SESSION["name"])) {
     <link rel="stylesheet" href="../CSS/Maquetado.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/parck.css">
-    <link rel="stylesheet" href="../CSS/dashboard.css">
     <link rel="stylesheet" href="../CSS/FRAMEWORK/Bootstrap.css">
     <!--Styles-->
 
@@ -113,13 +112,13 @@ if (!empty($_SESSION["name"])) {
             </div>
 
             <div class="enlace">
-                <i class="bx bx-printer"></i>
-                <a href="../parck.php"><span>Parque</span></a>
+                <i class='bx bx-barcode-reader'></i>
+                <a href="../client_reading.php"><span>Lecturas</span></a>
             </div>
 
             <div class="enlace">
-                <i class='bx bx-barcode-reader'></i>
-                <a href=""><span>Lectura</span></a>
+                <i class='bx bx-printer'></i>
+                <a href="../parck.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">
@@ -141,96 +140,6 @@ if (!empty($_SESSION["name"])) {
     </nav>
 
 
-    <aside class="sidebar">
-        <!--Group List-->
-        <div class="row-data">
-            <h4>Resumen de Costo</h4>
-            <div class="list-group">
-
-
-                <?php
-                    //Modelo
-                    include '../CONTROLLER/model_coste.php';
-
-                    
-                ?>
-
-                <!--LIST BN-->
-                <a href="#" class="list-group-item list-group-item-action" id="BN" aria-current="true">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Precio B/N $</h5>
-                        <small>3 days ago</small>
-                    </div>
-                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_BN_USD']; ?></p>
-                    <small>Precio por Click B/N USD.</small>
-                </a>
-
-
-                <a href="#" class="list-group-item list-group-item-action" id="color">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Precio Color $</h5>
-                        <small class="text-body-secondary">3 days ago</small>
-                    </div>
-                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_BN_BS']; ?></p>
-                    <small class="text-body-secondary">Precio por Click Color USD.</small>
-                </a>
-                <!--LIST BN-->
-
-
-                <!--LIST COLOR-->
-                <a href="#" class="list-group-item list-group-item-action" id="BN">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Precio B/N Bs</h5>
-                        <small>3 days ago</small>
-                    </div>
-                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_USD_COLOR']; ?></p>
-                    <small>Precio por Click B/N Bs.</small>
-                </a>
-
-                <a href="#" class="list-group-item list-group-item-action" id="color">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Precio Color Bs</h5>
-                        <small class="text-body-secondary">3 days ago</small>
-                    </div>
-                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_BS_COLOR']; ?></p>
-                    <small class="text-body-secondary">Precio por Click Color Bs.</small>
-                </a>
-                <!--LIST COLOR-->
-
-            </div>
-        </div>
-
-        <!--cards-->
-        <div class="container-resumen">
-
-            <div class="componets-card-resumen">
-
-                <div class="card-resumen">
-                    <span><b>Equipos</b></span>
-                    <br>
-                    <small>Catidad de Equipos</small>
-                    <div class="content">
-                        <span>1.200</span>
-                        <i class='bx bx-printer' style='color:#002134'></i>
-                    </div>
-                    <small>MFP & Printer</small>
-                </div>
-
-                <div class="card-resumen">
-                    <span><b>Precio Bs</b></span>
-                    <br>
-                    <small>Equipos B/N</small>
-                    <div class="content">
-                        <span>1.5</span>
-                        <i class='bx bxs-bank' style='color:#002134'></i>
-                    </div>
-                    <small>Costo Imp. B/N</small>
-                </div>
-
-            </div>
-        </div>
-
-    </aside>
 
 
     <article class="main">
@@ -247,9 +156,10 @@ if (!empty($_SESSION["name"])) {
 
 
 
-        <!--GRAFICOS-->
-        <div class="container-graficos">
-            <div class="row my-4">
+        <div class="container-public">
+            <!--GRAFICOS-->
+            <div class="container-graficos">
+
 
                 <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
                     <div id="chart1" class="chart"></div>
@@ -259,10 +169,81 @@ if (!empty($_SESSION["name"])) {
                     <div id="chart2" class="chart"></div>
                 </div>
 
-            </div>
-        </div>
-        <!--GRAFICOS-->
 
+
+                <!--Group List-->
+                <div class="row-data">
+                    <h4>Resumen de Costo</h4>
+                    <div class="list-group">
+
+
+                        <?php
+                        //Modelo
+                        include '../CONTROLLER/model_coste.php';
+
+                        ?>
+
+                        <!--LIST BN-->
+                        <a href="#" class="list-group-item list-group-item-action" id="BN" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Precio B/N $</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">
+                                <?php echo $COSTE['COSTE_DECLARADO_BN_USD']; ?>
+                            </p>
+                            <small>Precio por Click B/N USD.</small>
+                        </a>
+
+
+                        <a href="#" class="list-group-item list-group-item-action" id="color">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Precio Color $</h5>
+                                <small class="text-body-secondary">3 days ago</small>
+                            </div>
+                            <p class="mb-1">
+                                <?php echo $COSTE['COSTE_DECLARADO_BN_BS']; ?>
+                            </p>
+                            <small class="text-body-secondary">Precio por Click Color USD.</small>
+                        </a>
+                        <!--LIST BN-->
+
+
+                        <!--LIST COLOR-->
+                        <a href="#" class="list-group-item list-group-item-action" id="BN">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Precio B/N Bs</h5>
+                                <small>3 days ago</small>
+                            </div>
+                            <p class="mb-1">
+                                <?php echo $COSTE['COSTE_DECLARADO_USD_COLOR']; ?>
+                            </p>
+                            <small>Precio por Click B/N Bs.</small>
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action" id="color">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Precio Color Bs</h5>
+                                <small class="text-body-secondary">3 days ago</small>
+                            </div>
+                            <p class="mb-1">
+                                <?php echo $COSTE['COSTE_DECLARADO_BS_COLOR']; ?>
+                            </p>
+                            <small class="text-body-secondary">Precio por Click Color Bs.</small>
+                        </a>
+                        <!--LIST COLOR-->
+
+                    </div>
+                </div>
+
+            </div>
+            <!--GRAFICOS-->
+
+
+
+
+
+        </div>
 
         <!--table-park-->
         <!--Include Controller-->
@@ -284,13 +265,20 @@ if (!empty($_SESSION["name"])) {
                 <!--SEARCH-->
 
                 <?php
-                include ("../CONTROLLER/conexion.php");
+                include("../CONTROLLER/conexion.php");
 
                 $row = mysqli_query($conexion, "SELECT *FROM park;");
                 $num_rows = mysqli_num_rows($row);
                 ?>
 
-                <span>Cantidad de Registros: <b><?php echo $num_rows; ?></b></span>
+                <span>Cantidad de Registros: <b>
+                        <?php echo $num_rows; ?>
+                    </b></span>
+            </div>
+
+            <div class="icons-pages">
+                <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
             </div>
 
             <div class="content-table">
@@ -304,6 +292,7 @@ if (!empty($_SESSION["name"])) {
                             <th scope="col">Serial</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Localidad</th>
+                            <th scope="col">Fecha</th>
                             <th scope="col">Cont. Anterior</th>
                             <th scope="col">Cont. Actual</th>
                             <th scope="col">Volumen B/N</th>
@@ -324,17 +313,42 @@ if (!empty($_SESSION["name"])) {
 
                         <tbody>
                             <tr>
-                                <td><?= $datos->CLIENT ?></td>
-                                <td><?= $datos->RIF ?></td>
-                                <td><?= $datos->SERI ?></td>
-                                <td><?= $datos->MODEL ?></td>
-                                <td style="min-width: 400px;"><?= $datos->LOCATION ?></td>
-                                <td><?= $datos->CONT_ANTE_BN ?></td>
-                                <td><?= $datos->CONT_ACTU_BN ?></td>
-                                <td><?= $datos->VOLUM_BN ?></td>
-                                <td><?= $datos->CONT_ANTE_COLOR ?></td>
-                                <td><?= $datos->CONT_ACTU_COLOR ?></td>
-                                <td><?= $datos->VOLUM_COLOR ?></td>
+                                <td>
+                                    <?= $datos->CLIENT ?>
+                                </td>
+                                <td>
+                                    <?= $datos->RIF ?>
+                                </td>
+                                <td>
+                                    <?= $datos->SERI ?>
+                                </td>
+                                <td>
+                                    <?= $datos->MODEL ?>
+                                </td>
+                                <td style="min-width: 400px;">
+                                    <?= $datos->LOCATION ?>
+                                </td>
+                                <td>
+                                    <?= $datos->DATE ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ANTE_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ACTU_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->VOLUM_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ANTE_COLOR ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ACTU_COLOR ?>
+                                </td>
+                                <td>
+                                    <?= $datos->VOLUM_COLOR ?>
+                                </td>
 
                             </tr>
 
@@ -347,12 +361,6 @@ if (!empty($_SESSION["name"])) {
 
 
                 </table>
-            </div>
-
-
-            <div class="icons-pages">
-                <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
-                <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
             </div>
 
         </div>
@@ -369,6 +377,7 @@ if (!empty($_SESSION["name"])) {
 
 
     <!--SCRIPTS-->
+    <script src="../JS/search.js"></script>
     <script src="../JS/app.js"></script>
     <script src="../JS/main.js"></script>
     <script src="../JS/scroller_tables.js"></script>

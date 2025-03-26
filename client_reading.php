@@ -18,7 +18,7 @@ if (!empty($_SESSION["name"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudFact-Park</title>
+    <title>CloudFact-client-reading</title>
 
     <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -109,13 +109,13 @@ if (!empty($_SESSION["name"])) {
             </div>
 
             <div class="enlace">
-                <i class="bx bx-printer"></i>
-                <a href=""><span>Parque</span></a>
+                <i class='bx bx-barcode-reader'></i>
+                <a href="./client_reading.php"><span>Lecturas</span></a>
             </div>
 
             <div class="enlace">
-                <i class='bx bx-barcode-reader'></i>
-                <a href=""><span>Lectura</span></a>
+                <i class='bx bx-printer'></i>
+                <a href="./parck.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">
