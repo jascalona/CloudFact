@@ -289,11 +289,12 @@ if (!empty($_SESSION["name"])) {
                             <th scope="col">Serial</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Localidad</th>
-                            <tH scope="col">Cont. Anterior</th>
+                            <th scope="col">Cont. Anterior</th>
+                            <th scope="col">Cont. Actual</th>
+                            <th scope="col">Volumen B/N</th>
                             <th scope="col">Cont. Actual</th>
                             <th scope="col">Cont. Actual</th>
-                            <th scope="col">Cont. Actual</th>
-                            <th scope="col">Cont. Actual</th>
+                            <th scope="col">Volumen Color</th>
 
                         </tr>
                     </thead>
@@ -308,53 +309,18 @@ if (!empty($_SESSION["name"])) {
 
                     <tbody>
                         <tr>
-                            <td>
-                                <?= $datos->CLIENT ?>
-                            </td>
-                            <td>
-                                <?= $datos->RIF ?>
-                            </td>
-                            <td>
-                                <?= $datos->SERI ?>
-                            </td>
-                            <td>
-                                <?= $datos->MODEL ?>
-                            </td>
-                            <td>
-                                <?= $datos->LOCATION ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ANTE_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            
-
+                            <td><?= $datos->CLIENT?></td>
+                            <td><?= $datos->RIF?></td>
+                            <td><?= $datos->SERI?></td>
+                            <td><?= $datos->MODEL?></td>
+                            <td style="min-width: 400px;"><?= $datos->LOCATION?></td>
+                            <td><?= $datos->CONT_ANTE_BN?></td>
+                            <td><?= $datos->CONT_ACTU_BN?></td>
+                            <td><?= $datos->VOLUM_BN?></td>
+                            <td><?= $datos->CONT_ANTE_COLOR?></td>
+                            <td><?= $datos->CONT_ACTU_COLOR?></td>
+                            <td><?= $datos->VOLUM_COLOR?></td>
+        
                         </tr>
 
                         <?php
