@@ -344,9 +344,6 @@ table tr:nth-child(even) td {
 }
 
 
-
-
-
 @media (min-width: 992px) {
     .container-graficos{
         grid-template-columns: repeat(3, 1fr);
@@ -364,4 +361,46 @@ table tr:nth-child(even) td {
         grid-template-columns: 1fr;
         gap: 1%;
     }
+}
+
+/*SEARCH-READDING "PARK"*/
+/*FILTERS READING*/
+
+.container-filters{
+    background: #00acd31c;
+    margin-bottom: 50px;
+    padding: 50px 80px;
+    border-radius: 20px;
+}
+
+.search-reading input{
+    width: 600px;
+    height: 50px;
+    border-radius: 15px;
+    border: solid 1px #00acd362;
+}
+
+.container-form{
+    padding: 5px;
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-floating select{
+    width: 250px;
+}
+
+.container-form button{
+    background: #023245;
+    font-size: 14px;
+    color: #fff;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+}
+
+.container-form button:hover{
+    background: rgba(2, 50, 69, 0.783)
 }
