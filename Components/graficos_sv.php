@@ -147,14 +147,22 @@ if (!empty($_SESSION["name"])) {
             <h4>Resumen de Costo</h4>
             <div class="list-group">
 
+
+                <?php
+                    //Modelo
+                    include '../CONTROLLER/model_coste.php';
+
+                    
+                ?>
+
                 <!--LIST BN-->
                 <a href="#" class="list-group-item list-group-item-action" id="BN" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Precio B/N $</h5>
                         <small>3 days ago</small>
                     </div>
-                    <p class="mb-1">Precio por Click B/N USD.</p>
-                    <small>Equipos MFP & Printer.</small>
+                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_BN_USD']; ?></p>
+                    <small>Precio por Click B/N USD.</small>
                 </a>
 
 
@@ -163,8 +171,8 @@ if (!empty($_SESSION["name"])) {
                         <h5 class="mb-1">Precio Color $</h5>
                         <small class="text-body-secondary">3 days ago</small>
                     </div>
-                    <p class="mb-1">Precio por Click Color USD.</p>
-                    <small class="text-body-secondary">Equipos MFP & Printer.</small>
+                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_BN_BS']; ?></p>
+                    <small class="text-body-secondary">Precio por Click Color USD.</small>
                 </a>
                 <!--LIST BN-->
 
@@ -175,8 +183,8 @@ if (!empty($_SESSION["name"])) {
                         <h5 class="mb-1">Precio B/N Bs</h5>
                         <small>3 days ago</small>
                     </div>
-                    <p class="mb-1">Precio por Click B/N Bs.</p>
-                    <small>Equipos MFP & Printer.</small>
+                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_USD_COLOR']; ?></p>
+                    <small>Precio por Click B/N Bs.</small>
                 </a>
 
                 <a href="#" class="list-group-item list-group-item-action" id="color">
@@ -184,8 +192,8 @@ if (!empty($_SESSION["name"])) {
                         <h5 class="mb-1">Precio Color Bs</h5>
                         <small class="text-body-secondary">3 days ago</small>
                     </div>
-                    <p class="mb-1">Precio por Click Color Bs.</p>
-                    <small class="text-body-secondary">Equipos MFP & Printer.</small>
+                    <p class="mb-1"><?php echo $COSTE['COSTE_DECLARADO_BS_COLOR']; ?></p>
+                    <small class="text-body-secondary">Precio por Click Color Bs.</small>
                 </a>
                 <!--LIST COLOR-->
 
@@ -275,7 +283,14 @@ if (!empty($_SESSION["name"])) {
                 <!-- end search filter -->
                 <!--SEARCH-->
 
-                <span>Cantidad de Registros: <b>4</b></span>
+                <?php
+                include ("../CONTROLLER/conexion.php");
+
+                $row = mysqli_query($conexion, "SELECT *FROM park;");
+                $num_rows = mysqli_num_rows($row);
+                ?>
+
+                <span>Cantidad de Registros: <b><?php echo $num_rows; ?></b></span>
             </div>
 
             <div class="content-table">
@@ -283,7 +298,7 @@ if (!empty($_SESSION["name"])) {
                 <table class="table">
 
                     <thead>
-                        <tr>
+                        <tr class="table-primary">
                             <th scope="col">Cliente</th>
                             <th scope="col">RIF</th>
                             <th scope="col">Serial</th>
@@ -301,31 +316,31 @@ if (!empty($_SESSION["name"])) {
 
                     <?php
 
-                include('../CONTROLLER/conexion.php');
+                    include('../CONTROLLER/conexion.php');
 
-                $sql = $conexion->query(" SELECT *FROM park ");
-                while ($datos = $sql->fetch_object()) {
+                    $sql = $conexion->query(" SELECT *FROM park ");
+                    while ($datos = $sql->fetch_object()) {
+                        ?>
+
+                        <tbody>
+                            <tr>
+                                <td><?= $datos->CLIENT ?></td>
+                                <td><?= $datos->RIF ?></td>
+                                <td><?= $datos->SERI ?></td>
+                                <td><?= $datos->MODEL ?></td>
+                                <td style="min-width: 400px;"><?= $datos->LOCATION ?></td>
+                                <td><?= $datos->CONT_ANTE_BN ?></td>
+                                <td><?= $datos->CONT_ACTU_BN ?></td>
+                                <td><?= $datos->VOLUM_BN ?></td>
+                                <td><?= $datos->CONT_ANTE_COLOR ?></td>
+                                <td><?= $datos->CONT_ACTU_COLOR ?></td>
+                                <td><?= $datos->VOLUM_COLOR ?></td>
+
+                            </tr>
+
+                            <?php
+                    }
                     ?>
-
-                    <tbody>
-                        <tr>
-                            <td><?= $datos->CLIENT?></td>
-                            <td><?= $datos->RIF?></td>
-                            <td><?= $datos->SERI?></td>
-                            <td><?= $datos->MODEL?></td>
-                            <td style="min-width: 400px;"><?= $datos->LOCATION?></td>
-                            <td><?= $datos->CONT_ANTE_BN?></td>
-                            <td><?= $datos->CONT_ACTU_BN?></td>
-                            <td><?= $datos->VOLUM_BN?></td>
-                            <td><?= $datos->CONT_ANTE_COLOR?></td>
-                            <td><?= $datos->CONT_ACTU_COLOR?></td>
-                            <td><?= $datos->VOLUM_COLOR?></td>
-        
-                        </tr>
-
-                        <?php
-                }
-                ?>
 
                     </tbody>
 
