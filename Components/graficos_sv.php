@@ -107,7 +107,7 @@ if (!empty($_SESSION["name"])) {
         </div>
         <!-- MENU -->
         <div class="menu">
-        <div class="enlace">
+            <div class="enlace">
                 <i class='bx bxs-dashboard'></i>
                 <a href="../dashboard.php"><span>Panel</span></a>
             </div>
@@ -278,64 +278,100 @@ if (!empty($_SESSION["name"])) {
                 <span>Cantidad de Registros: <b>4</b></span>
             </div>
 
-            <table class="table">
+            <div class="content-table">
 
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
+                <table class="table">
 
-                <tbody>
-                    <tr>
-                        <td>Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">RIF</th>
+                            <th scope="col">Serial</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Localidad</th>
+                            <tH scope="col">Cont. Anterior</th>
+                            <th scope="col">Cont. Actual</th>
+                            <th scope="col">Cont. Actual</th>
+                            <th scope="col">Cont. Actual</th>
+                            <th scope="col">Cont. Actual</th>
 
-                    <tr>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
+                        </tr>
+                    </thead>
 
-                </tbody>
-            </table>
+                    <?php
+
+                include('../CONTROLLER/conexion.php');
+
+                $sql = $conexion->query(" SELECT *FROM park ");
+                while ($datos = $sql->fetch_object()) {
+                    ?>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <?= $datos->CLIENT ?>
+                            </td>
+                            <td>
+                                <?= $datos->RIF ?>
+                            </td>
+                            <td>
+                                <?= $datos->SERI ?>
+                            </td>
+                            <td>
+                                <?= $datos->MODEL ?>
+                            </td>
+                            <td>
+                                <?= $datos->LOCATION ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ANTE_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            
+
+                        </tr>
+
+                        <?php
+                }
+                ?>
+
+                    </tbody>
+
+
+
+                </table>
+            </div>
+
 
             <div class="icons-pages">
-                <button><i class='bx bx-chevron-left'></i></button>
-                <button><i class='bx bx-chevron-right'></i></button>
+                <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
             </div>
 
         </div>
@@ -354,6 +390,7 @@ if (!empty($_SESSION["name"])) {
     <!--SCRIPTS-->
     <script src="../JS/app.js"></script>
     <script src="../JS/main.js"></script>
+    <script src="../JS/scroller_tables.js"></script>
     <script src="../JS/echarts.js"></script>
     <script src="../JS/Bootstrap.js"></script>
     <!--SCRIPTS-->
