@@ -10,16 +10,23 @@ if (!empty($_POST['btn'])) {
         $user = $_POST['user'];
         $password = $_POST['password'];
 
-        $sql = $conexion->query(" SELECT *FROM log_partner WHERE email='$user' AND password='$password' ");
+        $sql = $conexion->query(" SELECT *FROM usercloud WHERE EMAIL='$user' AND PASSWORD='$password' ");
         
         /**SAVE DATA SECTION */
 
         if ($datos=$sql->fetch_object()) {
+            $_SESSION['ci']= $datos->ci;
             $_SESSION["name"]= $datos->name;
+            $_SESSION["name_two"]= $datos->name_two;
             $_SESSION["surname"]= $datos->surname;
+            $_SESSION["surname_two"]= $datos->surname_two;
             $_SESSION["email"]= $datos->email;
-            $_SESSION["corporation"]= $datos->corporation;
             $_SESSION["roll"]= $datos->roll;
+            $_SESSION["depart"]= $datos->depart;
+            $_SESSION["n_movil"]= $datos->n_movil;
+            $_SESSION["n_extension"]= $datos->n_extension;
+            $_SESSION['location']= $datos->Location;
+            
 
             header("Location: ./dashboard.php");
         } else {

@@ -297,5 +297,98 @@ article.min-main{
         gap: 1%;
 
     }
+}
 
+/*SECTION USER EDITION*/
+.user-edition{
+    display: flex;
+    align-items: center;
+    padding: 20px ;
+    background: #023443;
+    border-radius: 20px;
+    border: solid 1px #009592;
+    color: #fff;
+}
+
+.user-edition img{
+    width: 150px;
+    margin: 15px;
+}
+
+.user-edition .title-top{
+    margin-top: 45px;
+}
+
+.btn-password{
+    padding: 15px 5px;
+}
+
+.btn-password button{
+    background: #00f6ff;
+    font-size: 16px;
+    color: #023245;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;    
+}
+
+.btn-password button:hover{
+    background: #00f7ffa5;
+}
+
+/*componet-data-user*/
+.componet-data-user{
+    display: grid;
+    border-radius: 20px;
+    padding: 2%;
+    gap: 1%;
+}
+
+.item-componet{
+    border: solid 1px #a4b4fa58;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    line-height: 2;
+    background: #a4b4fa2f;
+    padding: 30px 40px;
+}
+
+.item-componet h6{
+    font-size: 25px;
+    font-weight: 700;
+    color: #023245;
+    padding-bottom: 30px;
+}
+
+.item-componet label{
+    font-size: 18px;
+
+}
+
+.item-componet p{
+    font-size: 17px;
+}
+
+.item-componet .btn-componet{
+    float: right;
+}
+
+.btn-componet button{
+    border-radius: 8px;
+    padding: 10px;
+    background: #023443;
+}
+
+@media (min-width: 992px) {
+    .componet-data-user{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .componet-data-user{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3%;
+    }
 }
