@@ -6,7 +6,7 @@ if (!empty($_SESSION["name"])) {
     if (
         (time() - $_SESSION['time']) > 100
     ) {
-        header("Location: ../log.php");
+        header("Location: ./log.php");
     }
 }
 ?>
@@ -93,7 +93,9 @@ if (!empty($_SESSION["name"])) {
         </div>
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
-            <img src="./images/icons/perfil.png" alt="">
+            <a href="./edit_user.php">
+                <img src="./images/icons/perfil.png" alt="">
+            </a>
             <br>
             <div class="text">
                 <span>
@@ -146,14 +148,13 @@ if (!empty($_SESSION["name"])) {
         <div class="container-top">
 
             <div class="user-edition">
-            <a href="./edit_user.php">
                 <img src="./images/profile.png" alt="">
 
                 <div class="title-top">
                     <h6>Benvenid@
                         <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                     </h6>
-                    <small><strong>Roll: </strong> Administrator</small>
+                    <small><strong>Roll: </strong> <?php echo $_SESSION['roll']; ?></small>
 
                     <br>
 
@@ -170,56 +171,73 @@ if (!empty($_SESSION["name"])) {
         <div class="container-data-user">
             <div class="componet-data-user">
 
+                <?php  include ("./CONTROLLER/update_data_user.php");?>
+
                 <article class="item-componet">
                     <h6>Datos de Contacto</h6>
 
                     <label for="">Correo electrónico</label>
-                    <p><strong>example@grupoxcven.com</strong></p>
+                    <p><strong><?php echo $_SESSION['email']; ?></strong></p>
                     <br>
 
                     <label for="">Nº Extensión</label>
-                    <p><strong>N\A</strong></p>
+                    <p><strong><?php echo $_SESSION['n_extension']; ?></strong></p>
 
 
-                    <label for="">Nº de móvil</label>
-                    <p><strong>N\A</strong></p>
+                    <label for="">Nº móvil</label>
+                    <p><strong><?php echo $_SESSION['n_movil']; ?></strong></p>
                     <br>
 
                     <label for="">Localidad</label>
-                    <p><strong>N\A</strong></p>
+                    <p><strong><?php echo $_SESSION['geo']; ?></strong></p>
 
                     <div class="btn-componet">
 
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal_datos_contact"
+                            data-bs-whatever="@getbootstrap">
                             Actualizar Datos
                         </button>
 
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <div class="modal fade" id="modal_datos_contact" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Datos de Contacto</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Datos de Contacto
+                                        </h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
+                                        <form method="POST" >
+
                                             <div class="mb-3">
-                                                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
+                                                <label for="recipient-name" class="col-form-label">Correo:</label>
+                                                <input type="email" name="email" class="form-control" id="recipient-name" value="<?php echo $_SESSION['email']; ?>">
                                             </div>
+
                                             <div class="mb-3">
-                                                <label for="message-text" class="col-form-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
+                                                <label for="recipient-name" class="col-form-label">Nº Extensión:</label>
+                                                <input type="text" name="n_extension" class="form-control" id="recipient-name" value="<?php echo $_SESSION['n_extension']; ?>" >
                                             </div>
+
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Nº móvil:</label>
+                                                <input type="text" name="n_movil" class="form-control" id="recipient-name" value="<?php echo $_SESSION['n_movil']; ?>">
+                                            </div>
+
+
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Localidad:</label>
+                                                <input type="text" name="geo" class="form-control" id="recipient-name" value="<?php echo $_SESSION['geo']; ?>">
+                                            </div>
+
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary">Actualizar</button>
+                                        <button type="submit" name="btn-update-contact" class="btn btn-primary">Actualizar</button>
                                     </div>
                                 </div>
                             </div>
@@ -234,51 +252,50 @@ if (!empty($_SESSION["name"])) {
                     <h6>Datos Personales</h6>
 
                     <label for="">Nombres</label>
-                    <p><strong>Jose Escalon</strong></p>
+                    <p><strong><?php echo $_SESSION['name'] . " " . $_SESSION['name_two']; ?></strong></p>
                     <br>
 
                     <label for="">Apellidos</label>
-                    <p><strong>Escalona Blanco</strong></p>
+                    <p><strong><?php echo $_SESSION['surname'] . " " . $_SESSION['surname_two']; ?></strong></p>
 
                     <label for="">Documento de Identidad</label>
-                    <p><strong>22.215.443.654</strong></p>
+                    <p><strong><?php echo $_SESSION['ci']; ?></strong></p>
                     <br>
 
                     <label for="">Departamento</label>
-                    <p><strong>Developer</strong></p>
+                    <p><strong><?php echo $_SESSION['depart']; ?></strong></p>
 
                     <div class="btn-componet">
 
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal_datos_personales"
+                            data-bs-whatever="@getbootstrap">
                             Actualizar Datos
                         </button>
 
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <div class="modal fade" id="modal_datos_personales" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Datos Personales</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Datos Personales
+                                        </h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form>
+
                                             <div class="mb-3">
-                                                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
+                                                <label for="recipient-name" class="col-form-label">Departamento:</label>
+                                                <input type="text" name="depart" class="form-control" id="recipient-name" value="<?php echo $_SESSION['depart']; ?>">
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="message-text" class="col-form-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
-                                            </div>
+
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary">Actualizar</button>
+                                        <button type="submit" name="btn-update-customer" class="btn btn-primary">Actualizar</button>
                                     </div>
                                 </div>
                             </div>

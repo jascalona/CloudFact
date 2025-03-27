@@ -93,8 +93,9 @@ if (!empty($_SESSION["name"])) {
         </div>
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
-        <a href="./edit_user.php">
-            <img src="./images/icons/perfil.png" alt="">
+            <a href="./edit_user.php">
+                <img src="./images/icons/perfil.png" alt="">
+            </a>
             <br>
             <div class="text">
                 <span>
@@ -201,7 +202,7 @@ if (!empty($_SESSION["name"])) {
                 </div>
 
 
-                <button type="button" class="">Filtrar</button>
+                <button type="button" class="">Aplicar Filtro</button>
 
             </div>
             <!--Filters-->
@@ -265,48 +266,48 @@ if (!empty($_SESSION["name"])) {
                     while ($datos = $sql->fetch_object()) {
                         ?>
 
-                    <tbody>
-                        <tr>
-                            <td>
-                                <?= $datos->CLIENT ?>
-                            </td>
-                            <td>
-                                <?= $datos->RIF ?>
-                            </td>
-                            <td>
-                                <?= $datos->SERI ?>
-                            </td>
-                            <td>
-                                <?= $datos->MODEL ?>
-                            </td>
-                            <td style="min-width: 400px;">
-                                <?= $datos->LOCATION ?>
-                            </td>
-                            <td>
-                                <?= $datos->DATE ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ANTE_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->VOLUM_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ANTE_COLOR ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_COLOR ?>
-                            </td>
-                            <td>
-                                <?= $datos->VOLUM_COLOR ?>
-                            </td>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <?= $datos->CLIENT ?>
+                                </td>
+                                <td>
+                                    <?= $datos->RIF ?>
+                                </td>
+                                <td>
+                                    <?= $datos->SERI ?>
+                                </td>
+                                <td>
+                                    <?= $datos->MODEL ?>
+                                </td>
+                                <td style="min-width: 400px;">
+                                    <?= $datos->LOCATION ?>
+                                </td>
+                                <td>
+                                    <?= $datos->DATE ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ANTE_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ACTU_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->VOLUM_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ANTE_COLOR ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ACTU_COLOR ?>
+                                </td>
+                                <td>
+                                    <?= $datos->VOLUM_COLOR ?>
+                                </td>
 
-                        </tr>
+                            </tr>
 
-                        <?php
+                            <?php
                     }
                     ?>
 

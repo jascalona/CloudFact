@@ -377,7 +377,6 @@ article.min-main{
 .btn-componet button{
     border-radius: 8px;
     padding: 10px;
-    background: #023443;
 }
 
 @media (min-width: 992px) {

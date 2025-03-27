@@ -10,7 +10,7 @@ if (!empty($_POST['btn'])) {
         $user = $_POST['user'];
         $password = $_POST['password'];
 
-        $sql = $conexion->query(" SELECT *FROM usercloud WHERE EMAIL='$user' AND PASSWORD='$password' ");
+        $sql = $conexion->query(" SELECT *FROM usercloud WHERE email='$user' AND password='$password' ");
         
         /**SAVE DATA SECTION */
 
@@ -25,7 +25,7 @@ if (!empty($_POST['btn'])) {
             $_SESSION["depart"]= $datos->depart;
             $_SESSION["n_movil"]= $datos->n_movil;
             $_SESSION["n_extension"]= $datos->n_extension;
-            $_SESSION['location']= $datos->Location;
+            $_SESSION['geo']= $datos->geo;
             
 
             header("Location: ./dashboard.php");

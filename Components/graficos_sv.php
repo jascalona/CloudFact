@@ -93,9 +93,10 @@ if (!empty($_SESSION["name"])) {
         </div>
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
-        <a href="./edit_user.php">
-            <img src="../images/icons/perfil.png" alt="">
-            <br>
+            <a href="../edit_user.php">
+                <img src="../images/icons/perfil.png" alt="">
+                <br>
+            </a>
             <div class="text">
                 <span>
                     <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
