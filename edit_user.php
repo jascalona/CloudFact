@@ -151,7 +151,7 @@ if (!empty($_SESSION["name"])) {
                 <img src="./images/profile.png" alt="">
 
                 <div class="title-top">
-                    <h6>Benvenid@
+                    <h6>Bienvenid@
                         <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                     </h6>
                     <small><strong>Roll: </strong> <?php echo $_SESSION['roll']; ?></small>
