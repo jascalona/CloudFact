@@ -391,3 +391,53 @@ article.min-main{
         gap: 3%;
     }
 }
+
+
+/*SECSION CONTAINER-LEARNING*/
+.container-learning{
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 20px;
+}
+
+.container-learning article .contenct{
+    color: #002134;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-bottom: 50px;
+    font-size: 13px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.container-learning article .contenct small {
+    font-size: 25px;
+    font-weight: 700;
+    color: #002134;
+}
+
+.container-learning article .contenct p{
+    font-size: 13px;
+    line-height: 2;
+}
+
+.container-learning article  img{
+    width: 500px;
+    float: left;
+    margin-right: 30px;
+}
+
+.container-learning button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container-learning button{
+    padding: 10px;
+    float: right;
+    margin: 20px;
+}
+
+/*SECSION CONTAINER-LEARNING*/

@@ -152,18 +152,35 @@ if (!empty($_SESSION["name"])) {
             <br>
 
 
-            <!--SEARCH-->
-            <!-- start search filter -->
-            <div class="search" data-aos="fade-up" data-aos-duration="1000" id="search">
-                <div class="container">
-                    <form class="">
-                        <input class="form-control me-2 light-table-filter" data-table="table" type="text"
-                            placeholder="Search...">
-                    </form>
-                </div>
+            <!--Uloap-->
+            <div class="container-learning">
+                <article>
+                    <div class="contenct">
+                        <img src="./images/panel.png" alt="">
+                        <small><b>Comunicado Servicio</b></small>
+                        <p>
+                            Deshazte de las malas prácticas y herramientas no optimizadas. El portal de entrenamiento
+                            XDV
+                            ofrece un acceso exclusivo a documentación y herramientas eficaces y de facil manejo.
+
+                            Mejora tu experiencia a la hora de atender una llamada de servicio, este portal fue diseñado
+                            con el proposito brindar a cada técnico y/o aliado de servicio, una formación completa sobre
+                            cada producto comercializado a nivel nacional en la gama de prodcutos Xerox y aliados
+                            comerciales
+                            tales como plataformas de control, herramientas para automatización de procesos y por su
+                            puesto equipos
+
+                            <br><br>
+                            <button class="btn btn-dark"><a href="">Cargar Lecturas</a></button>
+
+                        </p>
+                    </div>
+                    
+
+                </article>
             </div>
-            <!-- end search filter -->
-            <!--SEARCH-->
+
+            <!--Uloap-->
 
 
             <!--CRDS CUSTOMER-->
