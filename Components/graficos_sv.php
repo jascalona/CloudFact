@@ -93,6 +93,7 @@ if (!empty($_SESSION["name"])) {
         </div>
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
+        <a href="./edit_user.php">
             <img src="../images/icons/perfil.png" alt="">
             <br>
             <div class="text">

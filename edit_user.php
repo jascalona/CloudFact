@@ -146,6 +146,7 @@ if (!empty($_SESSION["name"])) {
         <div class="container-top">
 
             <div class="user-edition">
+            <a href="./edit_user.php">
                 <img src="./images/profile.png" alt="">
 
                 <div class="title-top">

@@ -90,7 +90,7 @@ if (!empty($_SESSION["name"])) {
         </div>
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
-            <a href="./edit_user.html">
+            <a href="./edit_user.php">
                 <img src="./images/icons/perfil.png" alt="">
             </a>
             <br>
@@ -122,7 +122,7 @@ if (!empty($_SESSION["name"])) {
 
             <div class="enlace">
                 <i class='bx bx-data'></i>
-                <a href="./install.html"><span>Instalaciones</span></a>
+                <a href="./install.php"><span>Instalaciones</span></a>
             </div>
 
             <div class="enlace">
