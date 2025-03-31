@@ -4,7 +4,7 @@ if (!empty($_SESSION["name"])) {
     header('');
 } else {
     if (
-        (time()- $_SESSION['time']) > 100
+        (time() - $_SESSION['time']) > 100
     ) {
         header("Location: ./log.php");
     }
@@ -171,69 +171,97 @@ if (!empty($_SESSION["name"])) {
                         <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aliquid!</small>
                     </div>
                     <!--INPUT GROUP FORM-->
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Cliente</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Nombre del Cliente">
-                    </div>
+                    <?php include("./CONTROLLER/Delete_desincor.php"); ?>
 
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">RIF</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="RIF del Cliente">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Serial</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Serial del Equipo">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Modelo</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Modelo del Equipo">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Direccion Exacta</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            placeholder="Ingrese Ubicacion del Equipo"></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Ciudad donde se Desinstalo el Equipo">
-                    </div>
+                    <form action="" method="POST">
 
 
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Fecha de Desinstalación</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Cliente</label>
+                            <input name="CLIENT" type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Nombre del Cliente">
+                        </div>
 
-   
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Contador de Desinstalación B/N</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">RIF</label>
+                            <input name="RIF" type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="RIF del Cliente">
+                        </div>
 
-        
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Contador de Desinstalación Color</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Serial</label>
+                            <input name="SERI" type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Serial del Equipo">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Observaciones:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Agrege un comentario (Opcional) "></textarea>
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Modelo</label>
+                            <input name="MODEL" type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Modelo del Equipo">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Anexar Carta de Instalación</label>
-                        <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
-                    </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Direccion Exacta</label>
+                            <textarea name="LOCATION" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                required placeholder="Ingrese Ubicacion del Equipo"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
+                            <input name="CITY" type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Ciudad donde se Instalo el Equipo">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Fecha de Instalacion</label>
+                            <input name="DATE" type="date" class="form-control" id="exampleFormControlInput1"
+                                placeholder="" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Modalidad de Intalación</label>
+                            <select name="N_PORT" id="status" class="form-select form-select-lg mb-3" required
+                                aria-label="Large select example">
+                                <option></option>
+                                <option value="USB">USB</option>
+                                <option value="IPv4">IPv4</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Contador de Desincorporación B/N</label>
+                            <input name="CONT_BN" type="number" class="form-control" id="exampleFormControlInput1"
+                                required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
+                                value="0">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Contador de Desincorporación
+                                Color</label>
+                            <input name="CONT_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
+                                required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
+                                value="0">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Observaciones:</label>
+                            <textarea name="OBSER" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Agrege un comentario (Opcional) " required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Anexar Carta de Desincorporación</label>
+                            <input name="DOC" type="file" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050" required>
+                        </div>
+
+                        <div class="btn-delete">
+                            <button type="submit" class="btn btn-dark" name="carga" value="submit">Cargar</button>
+                        </div>
+
+                    </form>
 
 
                 </div>

@@ -224,7 +224,7 @@ if (!empty($_SESSION["name"])) {
                 <?php
                 include("./CONTROLLER/conexion.php");
 
-                $row = mysqli_query($conexion, "SELECT *FROM park;");
+                $row = mysqli_query($conexion, "SELECT *FROM park_sgd ;");
                 $num_rows = mysqli_num_rows($row);
                 ?>
 
@@ -249,20 +249,19 @@ if (!empty($_SESSION["name"])) {
                             <th scope="col">Serial</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Localidad</th>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Cont. Anterior</th>
-                            <th scope="col">Cont. Actual</th>
-                            <th scope="col">Volumen B/N</th>
-                            <th scope="col">Cont. Actual</th>
-                            <th scope="col">Cont. Actual</th>
-                            <th scope="col">Volumen Color</th>
-
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Fecha Install</th>
+                            <th scope="col">Modalidad</th>
+                            <th scope="col">Cont. B/N Install</th>
+                            <th scope="col">Cont. Color Install</th>
+                            <th scope="col">Observaciones</th>
+                            <th scope="col">DOC</th>
                         </tr>
                     </thead>
 
                     <?php
 
-                    $sql = $conexion->query(" SELECT *FROM park ");
+                    $sql = $conexion->query(" SELECT *FROM park_sgd ");
                     while ($datos = $sql->fetch_object()) {
                         ?>
 
@@ -271,38 +270,49 @@ if (!empty($_SESSION["name"])) {
                                 <td>
                                     <?= $datos->CLIENT ?>
                                 </td>
+                                
                                 <td>
                                     <?= $datos->RIF ?>
                                 </td>
+                                
                                 <td>
                                     <?= $datos->SERI ?>
                                 </td>
+                                
                                 <td>
                                     <?= $datos->MODEL ?>
                                 </td>
+
                                 <td style="min-width: 400px;">
                                     <?= $datos->LOCATION ?>
                                 </td>
+
                                 <td>
-                                    <?= $datos->DATE ?>
+                                    <?= $datos->CITY ?>
                                 </td>
+
                                 <td>
-                                    <?= $datos->CONT_ANTE_BN ?>
+                                    <?= $datos->DATE_INSTA ?>
                                 </td>
+
                                 <td>
-                                    <?= $datos->CONT_ACTU_BN ?>
+                                    <?= $datos->N_PORT ?>
                                 </td>
+
                                 <td>
-                                    <?= $datos->VOLUM_BN ?>
+                                    <?= $datos->CONT_INSTA_BN ?>
                                 </td>
+                                
                                 <td>
-                                    <?= $datos->CONT_ANTE_COLOR ?>
+                                    <?= $datos->CONT_INSTA_COLOR ?>
                                 </td>
+                                
                                 <td>
-                                    <?= $datos->CONT_ACTU_COLOR ?>
+                                    <?= $datos->OBSER ?>
                                 </td>
+                                
                                 <td>
-                                    <?= $datos->VOLUM_COLOR ?>
+                                    <?= $datos->DOC ?>
                                 </td>
 
                             </tr>
