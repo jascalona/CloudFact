@@ -125,7 +125,7 @@ if (!empty($_SESSION["name"])) {
 
             <div class="enlace">
                 <i class='bx bx-message-square-x'></i>
-                <a href=""><span>Desincorporación</span></a>
+                <a href="./disincorporation.php"><span>Desincorporación</span></a>
             </div>
 
             <div class="enlace">
@@ -167,49 +167,72 @@ if (!empty($_SESSION["name"])) {
             <article class="card-install">
                 <div class="item-install-right">
                     <div class="cont-top">
-                    <h6>Registro de Instalación</h6>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aliquid!</small>
-                </div>
+                        <h6>Registro de Instalación</h6>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aliquid!</small>
+                    </div>
                     <!--INPUT GROUP FORM-->
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Cliente</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre del Cliente">
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Nombre del Cliente">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">RIF</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="RIF del Cliente">
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="RIF del Cliente">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Serial</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Serial del Equipo">
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Serial del Equipo">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Modelo</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Modelo del Equipo">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Fecha de Instalacion</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ciudad donde se Instalo el Equipo">
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Modelo del Equipo">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Direccion Exacta</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ingrese Ubicacion del Equipo"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Ingrese Ubicacion del Equipo"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Ciudad donde se Instalo el Equipo">
                     </div>
 
 
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="exampleFormControlInput1" class="form-label">Fecha de Instalacion</label>
+                        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    </div>
+
+   
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Contador de Instalación B/N</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
+                    </div>
+
+        
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Contador de Instalación Color</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Observaciones:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Agrege un comentario (Opcional) "></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Anexar Carta de Instalación</label>
+                        <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
                     </div>
 
 

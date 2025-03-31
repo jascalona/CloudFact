@@ -6,7 +6,7 @@ include('../CONTROLLER/conexion.php');
 /**
  * Alamacen de datos /
  */
-$query_coste = $conexion->query(" SELECT *FROM park WHERE RIF='J000340366' ");
+$query_coste = $conexion->query(" SELECT *FROM load_reading WHERE RIF='J000340366' ");
 
 
 if ($dt_coste = $query_coste->fetch_object()) {
@@ -18,7 +18,7 @@ if ($dt_coste = $query_coste->fetch_object()) {
 
 }
 
-$cont_devices = mysqli_query($conexion, "SELECT *FROM park WHERE RIF='J000340366' ");
+$cont_devices = mysqli_query($conexion, "SELECT *FROM load_reading WHERE RIF='J000340366' ");
 $cont_row_device = mysqli_num_rows($cont_devices);
 
 

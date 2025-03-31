@@ -443,18 +443,21 @@ article.min-main{
 
 /*CONTAINER-COMPONET-INSTALLATION*/
 .container-componet-installation{
-    background: #00f6ff;
     display: grid;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .container-componet-installation .card-install{
-    background: red;
     width: 100%;
+    background-color: #fff;
+    padding: 0;
+    margin: 20px;
 }
 
 /*STYLE CARD-LEFT*/
 .container-componet-installation .card-install .item-install-left{
-    background: blue;
+    background: #00aed3;
     height: 100%;
     border-radius: 0 20% 20% 0;
     overflow: hidden;
@@ -469,6 +472,7 @@ article.min-main{
     font-size: 37px;
     font-weight: 800;
     padding: 8px;
+    margin-top: 50%;
 }
 
 .item-install-left button {

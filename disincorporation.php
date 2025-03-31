@@ -4,7 +4,7 @@ if (!empty($_SESSION["name"])) {
     header('');
 } else {
     if (
-        (time() - $_SESSION['time']) > 100
+        (time()- $_SESSION['time']) > 100
     ) {
         header("Location: ./log.php");
     }
@@ -18,11 +18,10 @@ if (!empty($_SESSION["name"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudFact</title>
+    <title>CloudFact-Desincoporation</title>
 
     <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./CSS/Maquetado.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/dashboard.css">
     <link rel="stylesheet" href="./CSS/FRAMEWORK/Bootstrap.css">
@@ -77,7 +76,6 @@ if (!empty($_SESSION["name"])) {
         </div>
     </header>
 
-
     <nav class="menu-dashboard">
         <!-- TOP MENU -->
         <div class="top-menu">
@@ -109,7 +107,7 @@ if (!empty($_SESSION["name"])) {
                 <i class='bx bxs-dashboard'></i>
                 <a href="./dashboard.php"><span>Panel</span></a>
             </div>
-            
+
             <div class="enlace">
                 <i class='bx bx-barcode-reader'></i>
                 <a href="./client_reading.php"><span>Lecturas</span></a>
@@ -149,61 +147,103 @@ if (!empty($_SESSION["name"])) {
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
 
-            <!--cards-->
-            <div class="componets-card">
+        </div>
 
-                <div class="card">
-                    <span><b>Ventas</b></span>
-                    <small>Numero de Ventas</small>
-                    <div class="content">
-                        <span>1.200</span>
-                        <i class='bx bx-credit-card-alt' style='color:#002134'></i>
-                    </div>
-                    <small>comentario</small>
+
+        <div class="container-componet-installation">
+
+            <article class="card-install">
+                <div class="item-install-left">
+                    <h6>Componente de Carga</h6>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptate perspiciatis quas
+                    </small>
+                    <br>
+
+                    <button><a href="">Ver Video</a></button>
                 </div>
 
-                <div class="card">
-                    <span><b>Contrato SGD</b></span>
-                    <small>Clientes</small>
-                    <div class="content">
-                        <span>100</span>
-                        <i class='bx bx-user' style='color:#002134'></i>
+            </article>
+
+            <article class="card-install">
+                <div class="item-install-right">
+                    <div class="cont-top">
+                        <h6>Registro de Desincorporación</h6>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aliquid!</small>
                     </div>
-                    <small>comentario</small>
-                </div>
-
-                <div class="card">
-                    <span><b>Otro grafico</b></span>
-                    <small>Numero de Ventas</small>
-                    <div class="content">
-                        <span>100</span>
-                        <i class='bx bx-credit-card-alt' style='color:#002134'></i>
+                    <!--INPUT GROUP FORM-->
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Cliente</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Nombre del Cliente">
                     </div>
-                    <small>comentario</small>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">RIF</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="RIF del Cliente">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Serial</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Serial del Equipo">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Modelo del Equipo">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Direccion Exacta</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Ingrese Ubicacion del Equipo"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Ciudad donde se Desinstalo el Equipo">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Fecha de Desinstalación</label>
+                        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    </div>
+
+   
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Contador de Desinstalación B/N</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
+                    </div>
+
+        
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Contador de Desinstalación Color</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Observaciones:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Agrege un comentario (Opcional) "></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Anexar Carta de Instalación</label>
+                        <input type="file" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
+                    </div>
+
+
                 </div>
+            </article>
+            <!--INPUT GROUP FORM-->
 
-
-            </div>
-            <!--cards-->
 
         </div>
 
 
-        <!--GRAFICOS-->
-        <div class="container-graficos">
-            <div class="row my-4">
-
-                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
-                    <div id="chart1" class="chart"></div>
-                </div>
-
-                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
-                    <div id="chart2" class="chart"></div>
-                </div>
-
-            </div>
-        </div>
-        <!--GRAFICOS-->
 
     </article>
 

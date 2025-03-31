@@ -269,7 +269,7 @@ if (!empty($_SESSION["name"])) {
                 <?php
                 include("../CONTROLLER/conexion.php");
 
-                $row = mysqli_query($conexion, "SELECT *FROM park;");
+                $row = mysqli_query($conexion, "SELECT *FROM load_reading;");
                 $num_rows = mysqli_num_rows($row);
                 ?>
 
@@ -309,7 +309,7 @@ if (!empty($_SESSION["name"])) {
 
                     include('../CONTROLLER/conexion.php');
 
-                    $sql = $conexion->query(" SELECT *FROM park ");
+                    $sql = $conexion->query(" SELECT *FROM load_reading ");
                     while ($datos = $sql->fetch_object()) {
                         ?>
 
