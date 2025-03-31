@@ -1,18 +1,70 @@
+/*SECSION CARD-ALL*/
+.card-all{
+   
+    border: solid 1px rgba(55, 67, 118, 0.183);
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+    padding: 20px 20px;
+}
+
+
+
+.card-all .images-head img{
+    width: 200px;
+    padding: 20px 20px;
+}
+
+.container-card{
+    width: 100%;
+    margin: 5px auto;
+    padding: 1% 3%;
+    display: grid;
+    gap: 2%;
+}
+
+.item-card-all{
+    width: 100%;
+    padding: 50px;
+    line-height: 2.5;
+    border: solid 1px #0329323f;
+}
+
+.item-card-all h3{
+    font-size: 35px;
+    padding-top: 30px;
+}
+
+.item-card-all p{
+    font-size: 18px;
+}
+
+.item-card-all a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    .container-card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*CARD CLIENT_READING*/
 .componets-card-customer {
+    max-width: 100%;
+    margin: 30px auto;
     display: grid;
     padding: 2%;
     gap: 4%;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 90px 60px;
 }
 
 .card-customer {
-    min-width: 400px;
-    max-width: 500px;
-    padding: 20px 35px;
+    width: 100%;
+    min-width: 380px;
+    padding: 40px 35px;
     box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
-    border-radius: 8px;
+    border-radius: 2px;
     line-height: 1.7;
     background: #fff;
 }
@@ -42,7 +94,7 @@
 /*SIZE RESPONSIVE CARDS*/
 @media (min-width: 992px) {
     .componets-card-customer {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

@@ -153,31 +153,39 @@ if (!empty($_SESSION["name"])) {
 
 
             <!--Uloap-->
-            <div class="container-learning">
-                <article>
-                    <div class="contenct">
-                        <img src="./images/panel.png" alt="">
-                        <small><b>Comunicado Servicio</b></small>
-                        <p>
-                            Deshazte de las malas prácticas y herramientas no optimizadas. El portal de entrenamiento
-                            XDV
-                            ofrece un acceso exclusivo a documentación y herramientas eficaces y de facil manejo.
+            <div class="card-all">
 
-                            Mejora tu experiencia a la hora de atender una llamada de servicio, este portal fue diseñado
-                            con el proposito brindar a cada técnico y/o aliado de servicio, una formación completa sobre
-                            cada producto comercializado a nivel nacional en la gama de prodcutos Xerox y aliados
-                            comerciales
-                            tales como plataformas de control, herramientas para automatización de procesos y por su
-                            puesto equipos
+                <div class="images-head">
+                    <img src="./images/xdv.png" alt="">
+                </div>
 
-                            <br><br>
-                            <button class="btn btn-dark"><a href="">Cargar Lecturas</a></button>
+                <div class="container-card">
 
-                        </p>
-                    </div>
-                    
+                    <article class="item-card-all">
 
-                </article>
+                        <div class="item-cont">
+                            <h3>Informe Detallado Global</h3>
+                            <p>Total de Clientes: <strong>150</strong></p>
+                            <p>Cantidad de Registros: <strong>1605</strong></p>
+                            <p>Ultima Carga realizada: <strong>10/10/10</strong></p>
+                            <button class="btn btn-dark"><a href="">Ver Lecturas</a></button>
+                        </div>
+                    </article>
+
+                    <article class="item-card-all">
+                        <div class="item-cont">
+                            <!--Gafricos-->
+                            <div class="container-gra">
+                                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
+                                    <div class="charts" id="chart3"></div>
+                                </div>
+                            </div>
+                            <!--Gafricos-->
+
+                        </div>
+                    </article>
+                </div>
+
             </div>
 
             <!--Uloap-->
@@ -335,6 +343,7 @@ if (!empty($_SESSION["name"])) {
 
 
     <!--SCRIPTS-->
+    <script src="./JS/dash.js"></script>
     <script src="./js/app.js" defer></script>
     <script src="./JS/main.js"></script>
     <script src="./JS/echarts.js"></script>
