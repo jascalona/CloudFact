@@ -309,7 +309,7 @@ if (!empty($_SESSION["name"])) {
 
                     include('../CONTROLLER/conexion.php');
 
-                    $sql = $conexion->query(" SELECT *FROM load_reading ");
+                    $sql = $conexion->query(" SELECT *FROM load_reading WHERE RIF='J000340366' ");
                     while ($datos = $sql->fetch_object()) {
                         ?>
 
