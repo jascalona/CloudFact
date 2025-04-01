@@ -241,31 +241,29 @@ if (!empty($_SESSION["name"])) {
             </div>
             <!--GRAFICOS-->
 
-        </div>
 
 
-        <!--SECTION FILTERS PARK-->
-        <div class="container-filters">
 
-            <!--SEARCH-->
-            <!-- start search filter -->
-            <div class="search-reading" data-aos="fade-up" data-aos-duration="1000" id="search">
-                <div class="container">
-                    <form class="">
-                        <input class="form-control me-2 light-table-filter" data-table="table" type="text"
-                            placeholder="Search...">
-                    </form>
-                </div>
-            </div>
-            <!-- end search filter -->
-            <!--SEARCH-->
         </div>
 
         <!--table-park-->
         <!--Include Controller-->
         <div class="container-table">
             <div class="head-t">
-                <p>Customer's: <small>Seguros Venezuela</small></p> <br>`
+                <p>Customer's: <small>Global</small></p> <br>
+
+                <!--SEARCH-->
+                <!-- start search filter -->
+                <div class="search-park" data-aos="fade-up" data-aos-duration="1000" id="search">
+                    <div class="container">
+                        <form class="">
+                            <input class="form-control me-2 light-table-filter" data-table="table" type="text"
+                                placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+                <!-- end search filter -->
+                <!--SEARCH-->
 
                 <?php
                 include("../CONTROLLER/conexion.php");
@@ -310,7 +308,7 @@ if (!empty($_SESSION["name"])) {
 
                     include('../CONTROLLER/conexion.php');
 
-                    $sql = $conexion->query(" SELECT *FROM load_reading WHERE RIF='J000340366' ");
+                    $sql = $conexion->query(" SELECT *FROM load_reading  ");
                     while ($datos = $sql->fetch_object()) {
                         ?>
 

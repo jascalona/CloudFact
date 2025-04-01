@@ -22,6 +22,7 @@ if (!empty($_SESSION["name"])) {
 
     <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/dashboard.css">
     <link rel="stylesheet" href="./CSS/Maquetado.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/parck.css">
@@ -168,20 +169,17 @@ if (!empty($_SESSION["name"])) {
                             <p>Total de Clientes: <strong>150</strong></p>
                             <p>Cantidad de Registros: <strong>1605</strong></p>
                             <p>Ultima Carga realizada: <strong>10/10/10</strong></p>
-                            <button class="btn btn-dark"><a href="">Ver Lecturas</a></button>
+                            <button class="btn btn-dark"><a href="./Components/graficos_general.php">Ver
+                                    Lecturas</a></button>
+                            <button class="btn btn-dark"><a href="./Components/load_general.php" target="_blank">Cargar
+                                    Lecturas</a></button>
+
                         </div>
                     </article>
 
                     <article class="item-card-all">
                         <div class="item-cont">
-                            <!--Gafricos-->
-                            <div class="container-gra">
-                                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
-                                    <div class="charts" id="chart3"></div>
-                                </div>
-                            </div>
-                            <!--Gafricos-->
-
+                            Colocar Dahsboard
                         </div>
                     </article>
                 </div>
@@ -343,9 +341,8 @@ if (!empty($_SESSION["name"])) {
 
 
     <!--SCRIPTS-->
-    <script src="./JS/dash.js"></script>
-    <script src="./js/app.js" defer></script>
     <script src="./JS/main.js"></script>
+    <script src="./js/app.js" defer></script>
     <script src="./JS/echarts.js"></script>
     <script src="./JS/Bootstrap.js"></script>
     <!--SCRIPTS-->

@@ -18,10 +18,11 @@ if (!empty($_SESSION["name"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudFact-Reading-Customer</title>
+    <title>CloudFact-Park-Customer</title>
 
     <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/load.css">
     <link rel="stylesheet" href="../CSS/Maquetado.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/parck.css">
@@ -37,7 +38,7 @@ if (!empty($_SESSION["name"])) {
     <header class="header">
 
         <div class="logo">
-            <img src="../images/icons/cloud.svg" alt="">
+            <img src="./images/icons/cloud.svg" alt="">
             <span>CloudFact</span>
         </div>
 
@@ -94,9 +95,9 @@ if (!empty($_SESSION["name"])) {
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
             <a href="../edit_user.php">
-                <img src="../images/icons/perfil.png" alt="">
-                <br>
+                <img src="./images/icons/perfil.png" alt="">
             </a>
+            <br>
             <div class="text">
                 <span>
                     <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
@@ -120,17 +121,17 @@ if (!empty($_SESSION["name"])) {
 
             <div class="enlace">
                 <i class='bx bx-printer'></i>
-                <a href="../park.php"><span>Parque</span></a>
+                <a href="../parck.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">
                 <i class='bx bx-data'></i>
-                <a href="../install.html"><span>Instalaciones</span></a>
+                <a href="./install.php"><span>Instalaciones</span></a>
             </div>
 
             <div class="enlace">
                 <i class='bx bx-message-square-x'></i>
-                <a href=""><span>Desincorporación</span></a>
+                <a href="./disincorporation.php"><span>Desincorporación</span></a>
             </div>
 
             <div class="enlace">
@@ -148,7 +149,7 @@ if (!empty($_SESSION["name"])) {
         <div class="container-top">
 
             <div class="title-top">
-                <h6>Benvenid@
+                <h6>Bienvenid@
                     <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
                 </h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
@@ -158,94 +159,11 @@ if (!empty($_SESSION["name"])) {
 
 
 
-        <div class="container-public">
-            <!--GRAFICOS-->
-            <div class="container-graficos">
-
-
-                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
-                    <div id="chart1" class="chart"></div>
-                </div>
-
-                <div class="col-ms12 col-md6 col-lg-6 col-xl-6">
-                    <div id="chart2" class="chart"></div>
-                </div>
-
-
-
-                <!--Group List-->
-                <div class="row-data">
-                    <h4>Resumen de Costo</h4>
-                    <div class="list-group">
-
-
-                        <?php
-                        //Modelo
-                        include '../CONTROLLER/model_coste.php';
-
-                        ?>
-
-                        <!--LIST BN-->
-                        <a href="#" class="list-group-item list-group-item-action" id="BN" aria-current="true">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Precio B/N $</h5>
-                                <small>3 days ago</small>
-                            </div>
-                            <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_BN_USD']; ?>
-                            </p>
-                            <small>Precio por Click B/N USD.</small>
-                        </a>
-
-
-                        <a href="#" class="list-group-item list-group-item-action" id="color">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Precio Color $</h5>
-                                <small class="text-body-secondary">3 days ago</small>
-                            </div>
-                            <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_BN_BS']; ?>
-                            </p>
-                            <small class="text-body-secondary">Precio por Click Color USD.</small>
-                        </a>
-                        <!--LIST BN-->
-
-
-                        <!--LIST COLOR-->
-                        <a href="#" class="list-group-item list-group-item-action" id="BN">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Precio B/N Bs</h5>
-                                <small>3 days ago</small>
-                            </div>
-                            <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_USD_COLOR']; ?>
-                            </p>
-                            <small>Precio por Click B/N Bs.</small>
-                        </a>
-
-                        <a href="#" class="list-group-item list-group-item-action" id="color">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Precio Color Bs</h5>
-                                <small class="text-body-secondary">3 days ago</small>
-                            </div>
-                            <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_BS_COLOR']; ?>
-                            </p>
-                            <small class="text-body-secondary">Precio por Click Color Bs.</small>
-                        </a>
-                        <!--LIST COLOR-->
-
-                    </div>
-                </div>
-
-            </div>
-            <!--GRAFICOS-->
-
-        </div>
-
-
         <!--SECTION FILTERS PARK-->
         <div class="container-filters">
+
+            <h2>Consulta y Carga de Contadores Global</h2>
+            
 
             <!--SEARCH-->
             <!-- start search filter -->
@@ -259,18 +177,53 @@ if (!empty($_SESSION["name"])) {
             </div>
             <!-- end search filter -->
             <!--SEARCH-->
+            <br><br>
+            
+            <div class="container-load">
+                <form action="recibe_excel_validando.php" method="POST" enctype="multipart/form-data">
+                    <div class="file-input text-center">
+                        <input type="file" name="dataCliente" id="file-input" class="file-input__input" />
+                        <label class="file-input__label" for="file-input">
+                            <i class="zmdi zmdi-upload zmdi-hc-2x"></i>
+                            <span>Elegir Archivo Excel</span></label>
+                    </div>
+                    <div class="text-center mt-5">
+                        <input type="submit" name="subir" class="btn btn-dark" value="Cargar Excel" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-5">
+                <?php
+                header("Content-Type: text/html;charset=utf-8");
+                include('config.php');
+                $sqlClientes = ("SELECT * FROM clientes ORDER BY id ASC");
+                $queryData = mysqli_query($con, $sqlClientes);
+                $total_client = mysqli_num_rows($queryData);
+                ?>
+
+
+
+            </div>
         </div>
+
+        </div>
+        <!--SECTION FILTERS PARK-->
+
+
+
+
 
         <!--table-park-->
         <!--Include Controller-->
         <div class="container-table">
             <div class="head-t">
-                <p>Customer's: <small>Seguros Venezuela</small></p> <br>`
+                <p>Customer's: <small>Park</small></p> <br>
 
                 <?php
-                include("../CONTROLLER/conexion.php");
+                include("./CONTROLLER/conexion.php");
 
-                $row = mysqli_query($conexion, "SELECT *FROM load_reading;");
+                $row = mysqli_query($conexion, "SELECT *FROM park_sgd ;");
                 $num_rows = mysqli_num_rows($row);
                 ?>
 
@@ -302,60 +255,57 @@ if (!empty($_SESSION["name"])) {
                             <th scope="col">Cont. Actual</th>
                             <th scope="col">Cont. Actual</th>
                             <th scope="col">Volumen Color</th>
-
                         </tr>
                     </thead>
 
                     <?php
 
-                    include('../CONTROLLER/conexion.php');
-
-                    $sql = $conexion->query(" SELECT *FROM load_reading WHERE RIF='J000340366' ");
+                    $sql = $conexion->query(" SELECT *FROM load_reading ");
                     while ($datos = $sql->fetch_object()) {
                         ?>
 
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <?= $datos->CLIENT ?>
-                                </td>
-                                <td>
-                                    <?= $datos->RIF ?>
-                                </td>
-                                <td>
-                                    <?= $datos->SERI ?>
-                                </td>
-                                <td>
-                                    <?= $datos->MODEL ?>
-                                </td>
-                                <td style="min-width: 400px;">
-                                    <?= $datos->LOCATION ?>
-                                </td>
-                                <td>
-                                    <?= $datos->DATE ?>
-                                </td>
-                                <td>
-                                    <?= $datos->CONT_ANTE_BN ?>
-                                </td>
-                                <td>
-                                    <?= $datos->CONT_ACTU_BN ?>
-                                </td>
-                                <td>
-                                    <?= $datos->VOLUM_BN ?>
-                                </td>
-                                <td>
-                                    <?= $datos->CONT_ANTE_COLOR ?>
-                                </td>
-                                <td>
-                                    <?= $datos->CONT_ACTU_COLOR ?>
-                                </td>
-                                <td>
-                                    <?= $datos->VOLUM_COLOR ?>
-                                </td>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <?= $datos->CLIENT ?>
+                            </td>
+                            <td>
+                                <?= $datos->RIF ?>
+                            </td>
+                            <td>
+                                <?= $datos->SERI ?>
+                            </td>
+                            <td>
+                                <?= $datos->MODEL ?>
+                            </td>
+                            <td style="min-width: 400px;">
+                                <?= $datos->LOCATION ?>
+                            </td>
+                            <td>
+                                <?= $datos->DATE ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ANTE_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->VOLUM_BN ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ANTE_COLOR ?>
+                            </td>
+                            <td>
+                                <?= $datos->CONT_ACTU_COLOR ?>
+                            </td>
+                            <td>
+                                <?= $datos->VOLUM_COLOR ?>
+                            </td>
 
-                            </tr>
+                        </tr>
 
-                            <?php
+                        <?php
                     }
                     ?>
 

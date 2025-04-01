@@ -425,6 +425,12 @@ table tr:nth-child(even) td {
     border-radius: 20px;
 }
 
+.container-filters h2{
+    font-weight: 800;
+    font-size: 35px;
+    padding: 30px 10px;
+}
+
 .search-reading input{
     width: 600px;
     height: 50px;
