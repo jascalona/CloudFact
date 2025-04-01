@@ -180,15 +180,15 @@ if (!empty($_SESSION["name"])) {
             <br><br>
             
             <div class="container-load">
-                <form action="../CONTROLLER/recibe_excel.php" method="POST" enctype="multipart/form-data">
+                <form action="../CONTROLLER/load_csv.php" method="POST" enctype="multipart/form-data">
                     <div class="file-input text-center">
-                        <input type="file" name="dataCliente" id="file-input" class="file-input__input" />
+                        <input type="file" accept=".csv" name="dataCliente" id="file-input" class="file-input__input" required />
                         <label class="file-input__label" for="file-input">
                             <i class="zmdi zmdi-upload zmdi-hc-2x"></i>
-                            <span>Elegir Archivo Excel</span></label>
+                            <small>Anexar Formato CSV</small></label>
                     </div>
                     <div class="text-center mt-5">
-                        <input type="submit" name="subir" class="btn btn-dark" value="Cargar Excel" />
+                        <input type="submit" name="subir" id="btn_load" onclick="load_reading_general();" class="btn btn-dark" value="Cargar CSV" />
                     </div>
                 </form>
             </div>
@@ -319,6 +319,7 @@ if (!empty($_SESSION["name"])) {
 
 
     <!--SCRIPTS-->
+    <script src="../JS/alert.js"></script>
     <script src="../JS/search.js"></script>
     <script src="../JS/app.js"></script>
     <script src="../JS/main.js"></script>

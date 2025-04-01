@@ -13,7 +13,7 @@ $i = 0;
 
 foreach ($lineas as $linea) {
     $cantidad_registros = count($lineas);
-    $cantidad_regist_agregados =  ($cantidad_registros - 0);
+    $cantidad_regist_agregados =  ($cantidad_registros - 1);
 
     if ($i != 0) {
 
@@ -24,13 +24,11 @@ foreach ($lineas as $linea) {
         $LOCATION               = !empty($datos[2])  ? ($datos[2]) : '';
         $MODEL               = !empty($datos[3])  ? ($datos[3]) : '';
         $SERI               = !empty($datos[4])  ? ($datos[4]) : '';
-        $DATE               = !empty($datos[6])  ? ($datos[6]) : '';
-        $VOLUM_BN            = !empty($datos[7])  ? ($datos[7]) : '';
-        $VOLUM_COLOR            = !empty($datos[8])  ? ($datos[8]) : '';
-        $CONT_ACTU_BN            = !empty($datos[12])  ? ($datos[12]) : '';
-        $CONT_ACTU_COLOR            = !empty($datos[13])  ? ($datos[13]) : '';
-
-
+        $DATE               = !empty($datos[5])  ? ($datos[5]) : '';
+        $VOLUM_BN            = !empty($datos[6])  ? ($datos[6]) : '';
+        $VOLUM_COLOR            = !empty($datos[7])  ? ($datos[7]) : '';
+        $CONT_ACTU_BN            = !empty($datos[8])  ? ($datos[8]) : '';
+        $CONT_ACTU_COLOR            = !empty($datos[9])  ? ($datos[9]) : '';
        
     $insertar = "INSERT INTO load_reading( 
 			RIF,
@@ -58,13 +56,15 @@ foreach ($lineas as $linea) {
         mysqli_query($conexion, $insertar);
     }
 
-      echo '<div>'. $i. "). " .$linea.'</div>';
+       '<div>'. $i. "). " .$linea.'</div>';
     $i++;
+
+
+    header("Location: ../Components/load_general.php");
 }
 
 
-  echo '<p style="text-aling:center; color:#333;">Total de Registros: '. $cantidad_regist_agregados .'</p>';
 
 ?>
 
-<a href="../Components/load_general.php">Atras</a>
+
