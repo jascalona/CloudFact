@@ -180,7 +180,7 @@ if (!empty($_SESSION["name"])) {
             <br><br>
             
             <div class="container-load">
-                <form action="recibe_excel_validando.php" method="POST" enctype="multipart/form-data">
+                <form action="../CONTROLLER/recibe_excel.php" method="POST" enctype="multipart/form-data">
                     <div class="file-input text-center">
                         <input type="file" name="dataCliente" id="file-input" class="file-input__input" />
                         <label class="file-input__label" for="file-input">
@@ -193,18 +193,7 @@ if (!empty($_SESSION["name"])) {
                 </form>
             </div>
 
-            <div class="col-md-5">
-                <?php
-                header("Content-Type: text/html;charset=utf-8");
-                include('config.php');
-                $sqlClientes = ("SELECT * FROM clientes ORDER BY id ASC");
-                $queryData = mysqli_query($con, $sqlClientes);
-                $total_client = mysqli_num_rows($queryData);
-                ?>
-
-
-
-            </div>
+           
         </div>
 
         </div>
@@ -221,7 +210,7 @@ if (!empty($_SESSION["name"])) {
                 <p>Customer's: <small>Park</small></p> <br>
 
                 <?php
-                include("./CONTROLLER/conexion.php");
+                include("../CONTROLLER/conexion.php");
 
                 $row = mysqli_query($conexion, "SELECT *FROM park_sgd ;");
                 $num_rows = mysqli_num_rows($row);
