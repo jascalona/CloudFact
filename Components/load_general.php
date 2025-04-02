@@ -163,9 +163,9 @@ if (!empty($_SESSION["name"])) {
         <div class="container-filters">
 
             <h2>Consulta y Carga de Contadores Global</h2>
-            
 
-            <!--SEARCH-->
+
+           <!--SEARCH-->
             <!-- start search filter -->
             <div class="search-reading" data-aos="fade-up" data-aos-duration="1000" id="search">
                 <div class="container">
@@ -177,26 +177,82 @@ if (!empty($_SESSION["name"])) {
             </div>
             <!-- end search filter -->
             <!--SEARCH-->
-            <br><br>
-            
-            <div class="container-load">
-                <form action="../CONTROLLER/load_csv.php" method="POST" enctype="multipart/form-data">
-                    <div class="file-input text-center">
-                        <input type="file" accept=".csv" name="dataCliente" id="file-input" class="file-input__input" required />
-                        <label class="file-input__label" for="file-input">
-                            <i class="zmdi zmdi-upload zmdi-hc-2x"></i>
-                            <small>Anexar Formato CSV</small></label>
+
+            <div class="advanced">
+
+                <!-- Button modal Activation-->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i style="font-size: 40px;" class='bx bx-cog'></i>
+                </button>
+                <!-- Button modal Activation-->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel"><strong>Opciones Avanzadas</strong>
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+
+                            <div class="modal-body">
+
+                                <h2 class="fs-5">Descarga de Plantilla</h2>
+                                <p>Aquí puede descargar la Plantilla de Importación <a href="·" data-bs-toggle="tooltip"
+                                        title="Tooltip">Descargar</a></p>
+
+                                <hr>
+
+                                <h2 class="fs-5">Importar CSV</h2>
+                                <p>Realice la carga de lecturas através de un CSV.</p>
+
+                                <form action="../CONTROLLER/load_csv.php" method="POST" enctype="multipart/form-data">
+                                    <div class="file-input text-center">
+                                        <input type="file" accept=".csv" name="dataCliente" id="file-input"
+                                            class="form-control" required />
+                                        <label class="file-input__label" for="file-input">
+                                    </div>
+
+
+                                    <div class="text-start mt-4">
+                                        <button type="submit" name="subir" id="btn_load"
+                                            onclick="load_reading_general();" class="btn btn-dark" value="Submit">Cargar
+                                            CSV</button>
+                                    </div>
+                                </form>
+
+                                <hr>
+                                <h2 class="fs-5">Exportar CSV</h2>
+                                <p>Exportar Lecturas Globales</p>
+
+                                <div class="text-start mt-4">
+                                    <button type="submit" name="export" id="export" class="btn btn-dark"
+                                        value="Submit">Exportar
+                                        CSV</button>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-center mt-5">
-                        <input type="submit" name="subir" id="btn_load" onclick="load_reading_general();" class="btn btn-dark" value="Cargar CSV" />
-                    </div>
-                </form>
+                </div>
+                <!-- Modal -->
+
             </div>
 
-           
-        </div>
 
         </div>
+
         <!--SECTION FILTERS PARK-->
 
 
@@ -238,11 +294,11 @@ if (!empty($_SESSION["name"])) {
                             <th scope="col">Modelo</th>
                             <th scope="col">Localidad</th>
                             <th scope="col">Fecha</th>
-                            <th scope="col">Cont. Anterior</th>
-                            <th scope="col">Cont. Actual</th>
+                            <th scope="col">Cont. Anterior B/N</th>
+                            <th scope="col">Cont. Actual B/N</th>
                             <th scope="col">Volumen B/N</th>
-                            <th scope="col">Cont. Actual</th>
-                            <th scope="col">Cont. Actual</th>
+                            <th scope="col">Cont. Anterior Color</th>
+                            <th scope="col">Cont. Actual Color</th>
                             <th scope="col">Volumen Color</th>
                         </tr>
                     </thead>

@@ -169,10 +169,8 @@ if (!empty($_SESSION["name"])) {
                             <p>Total de Clientes: <strong>150</strong></p>
                             <p>Cantidad de Registros: <strong>1605</strong></p>
                             <p>Ultima Carga realizada: <strong>10/10/10</strong></p>
-                            <button class="btn btn-dark"><a href="./Components/graficos_general.php">Ver
-                                    Lecturas</a></button>
-                            <button class="btn btn-dark"><a href="./Components/load_general.php" target="_blank">Cargar
-                                    Lecturas</a></button>
+                        
+                            <button class="btn btn-dark"><a href="./Components/load_general.php" target="_blank">Ver Lecturas</a></button>
 
                         </div>
                     </article>
