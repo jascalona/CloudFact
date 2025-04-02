@@ -8,7 +8,7 @@
 
 <table style="border: solid 1px #000;">
     <tr>
-        <th>Cliente</th>
+        <th style="background: #000;">Cliente</th>
         <th>RIF</th>
         <th>SERIAL</th>
         <th>MODELO</th>

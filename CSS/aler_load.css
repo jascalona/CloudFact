@@ -1,0 +1,33 @@
+
+
+
+.container-register{
+    max-width: 80%;
+    margin: 8% auto;
+    color: #fff;
+}
+
+.container-register-card{
+    background: blue;
+    width: 450px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 20px;
+    background: #a5b4f517;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+    text-align: center;
+}
+
+.container-register p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container-register a{
+    margin: 80px 20px;
+    text-align: center;
+}
