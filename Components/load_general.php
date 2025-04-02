@@ -165,7 +165,7 @@ if (!empty($_SESSION["name"])) {
             <h2>Consulta y Carga de Contadores Global</h2>
 
 
-           <!--SEARCH-->
+            <!--SEARCH-->
             <!-- start search filter -->
             <div class="search-reading" data-aos="fade-up" data-aos-duration="1000" id="search">
                 <div class="container">
@@ -202,13 +202,13 @@ if (!empty($_SESSION["name"])) {
 
                             <div class="modal-body">
 
-                                <h2 class="fs-5">Descarga de Plantilla</h2>
+                                <h4>Descargar Plantillas</h4>
                                 <p>Aquí puede descargar la Plantilla de Importación <a href="·" data-bs-toggle="tooltip"
                                         title="Tooltip">Descargar</a></p>
 
                                 <hr>
 
-                                <h2 class="fs-5">Importar CSV</h2>
+                                <h4>Importar .CSV</h4>
                                 <p>Realice la carga de lecturas através de un CSV.</p>
 
                                 <form action="../CONTROLLER/load_csv.php" method="POST" enctype="multipart/form-data">
@@ -219,21 +219,21 @@ if (!empty($_SESSION["name"])) {
                                     </div>
 
 
-                                    <div class="text-start mt-4">
+                                    <div class="text-start mt-2">
                                         <button type="submit" name="subir" id="btn_load"
                                             onclick="load_reading_general();" class="btn btn-dark" value="Submit">Cargar
-                                            CSV</button>
+                                            .CSV</button>
                                     </div>
                                 </form>
 
                                 <hr>
-                                <h2 class="fs-5">Exportar CSV</h2>
+                                <h4>Exportar .XLS</h4>
                                 <p>Exportar Lecturas Globales</p>
 
                                 <div class="text-start mt-4">
-                                    <button type="submit" name="export" id="export" class="btn btn-dark"
-                                        value="Submit">Exportar
-                                        CSV</button>
+                                    <form action="" method="POST">
+                                        <a href="../CONTROLLER/Export_data.php" name="export" id="export" class="btn btn-dark" value="Submit">Exportar .XLS</a>
+                                    </form>
                                 </div>
 
 
@@ -309,48 +309,48 @@ if (!empty($_SESSION["name"])) {
                     while ($datos = $sql->fetch_object()) {
                         ?>
 
-                    <tbody>
-                        <tr>
-                            <td>
-                                <?= $datos->CLIENT ?>
-                            </td>
-                            <td>
-                                <?= $datos->RIF ?>
-                            </td>
-                            <td>
-                                <?= $datos->SERI ?>
-                            </td>
-                            <td>
-                                <?= $datos->MODEL ?>
-                            </td>
-                            <td style="min-width: 400px;">
-                                <?= $datos->LOCATION ?>
-                            </td>
-                            <td>
-                                <?= $datos->DATE ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ANTE_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->VOLUM_BN ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ANTE_COLOR ?>
-                            </td>
-                            <td>
-                                <?= $datos->CONT_ACTU_COLOR ?>
-                            </td>
-                            <td>
-                                <?= $datos->VOLUM_COLOR ?>
-                            </td>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <?= $datos->CLIENT ?>
+                                </td>
+                                <td>
+                                    <?= $datos->RIF ?>
+                                </td>
+                                <td>
+                                    <?= $datos->SERI ?>
+                                </td>
+                                <td>
+                                    <?= $datos->MODEL ?>
+                                </td>
+                                <td style="min-width: 400px;">
+                                    <?= $datos->LOCATION ?>
+                                </td>
+                                <td>
+                                    <?= $datos->DATE ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ANTE_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ACTU_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->VOLUM_BN ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ANTE_COLOR ?>
+                                </td>
+                                <td>
+                                    <?= $datos->CONT_ACTU_COLOR ?>
+                                </td>
+                                <td>
+                                    <?= $datos->VOLUM_COLOR ?>
+                                </td>
 
-                        </tr>
+                            </tr>
 
-                        <?php
+                            <?php
                     }
                     ?>
 

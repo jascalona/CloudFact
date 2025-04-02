@@ -23,6 +23,7 @@ if (!empty($_SESSION["name"])) {
     <!--Styles-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../CSS/Maquetado.css">
+    <link rel="stylesheet" href="../CSS/load.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/parck.css">
     <link rel="stylesheet" href="../CSS/FRAMEWORK/Bootstrap.css">
@@ -259,6 +260,53 @@ if (!empty($_SESSION["name"])) {
             </div>
             <!-- end search filter -->
             <!--SEARCH-->
+            <br>
+
+            <div class="advanced">
+
+                <!-- Button modal Activation-->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i style="font-size: 40px;" class='bx bx-cog'></i>
+                </button>
+                <!-- Button modal Activation-->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel"><strong>Opciones Avanzadas</strong>
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+
+                            <div class="modal-body">
+                                <h4>Exportar Lecturas</h4>
+
+                                <div class="text-start mt-3">
+                                    <button type="submit" name="export" id="export" class="btn btn-dark"
+                                        value="Submit">Exportar
+                                        CSV</button>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+
+            </div>
+
         </div>
 
         <!--table-park-->
