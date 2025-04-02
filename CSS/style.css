@@ -41,7 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
-    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.12);
 }
 
 header .logo img {

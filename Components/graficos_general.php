@@ -148,9 +148,7 @@ if (!empty($_SESSION["name"])) {
         <div class="container-top">
 
             <div class="title-top">
-                <h6>Benvenid@
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
-                </h6>
+                <h6>Lectura General</h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
 

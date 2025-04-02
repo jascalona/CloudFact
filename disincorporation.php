@@ -141,8 +141,8 @@ if (!empty($_SESSION["name"])) {
         <div class="container-top">
 
             <div style="padding-top: 70px;" class="title-top">
-                <h6>Bienvenid@
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
+                <h6>
+                    Desincorporación
                 </h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
@@ -230,7 +230,8 @@ if (!empty($_SESSION["name"])) {
                         </div>
 
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Contador de Desincorporación B/N</label>
+                            <label for="exampleFormControlInput1" class="form-label">Contador de Desincorporación
+                                B/N</label>
                             <input name="CONT_BN" type="number" class="form-control" id="exampleFormControlInput1"
                                 required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
                                 value="0">
@@ -252,7 +253,8 @@ if (!empty($_SESSION["name"])) {
                         </div>
 
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Anexar Carta de Desincorporación</label>
+                            <label for="exampleFormControlInput1" class="form-label">Anexar Carta de
+                                Desincorporación</label>
                             <input name="DOC" type="file" class="form-control" id="exampleFormControlInput1"
                                 placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050" required>
                         </div>

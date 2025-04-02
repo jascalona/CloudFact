@@ -149,9 +149,7 @@ if (!empty($_SESSION["name"])) {
         <div class="container-top">
 
             <div class="title-top">
-                <h6>Benvenid@
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
-                </h6>
+                <h6>Lecturas: Seguros Venezuela, C.A</h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
 
@@ -193,7 +191,7 @@ if (!empty($_SESSION["name"])) {
                                 <small>3 days ago</small>
                             </div>
                             <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_BN_USD']; ?>
+                                <?php echo $COSTE['PRECI_CLICK_USD_BN']; ?>
                             </p>
                             <small>Precio por Click B/N USD.</small>
                         </a>
@@ -205,7 +203,7 @@ if (!empty($_SESSION["name"])) {
                                 <small class="text-body-secondary">3 days ago</small>
                             </div>
                             <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_BN_BS']; ?>
+                                <?php echo $COSTE['PRECIO_CLICK_BS_BN']; ?>
                             </p>
                             <small class="text-body-secondary">Precio por Click Color USD.</small>
                         </a>
@@ -219,7 +217,7 @@ if (!empty($_SESSION["name"])) {
                                 <small>3 days ago</small>
                             </div>
                             <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_USD_COLOR']; ?>
+                                <?php echo $COSTE['PRECIO_CLICK_USD_COLOR']; ?>
                             </p>
                             <small>Precio por Click B/N Bs.</small>
                         </a>
@@ -230,7 +228,7 @@ if (!empty($_SESSION["name"])) {
                                 <small class="text-body-secondary">3 days ago</small>
                             </div>
                             <p class="mb-1">
-                                <?php echo $COSTE['COSTE_DECLARADO_BS_COLOR']; ?>
+                                <?php echo $COSTE['PRECIO_CLICK_BS_COLOR']; ?>
                             </p>
                             <small class="text-body-secondary">Precio por Click Color Bs.</small>
                         </a>

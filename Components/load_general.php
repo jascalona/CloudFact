@@ -121,7 +121,7 @@ if (!empty($_SESSION["name"])) {
 
             <div class="enlace">
                 <i class='bx bx-printer'></i>
-                <a href="../parck.php"><span>Parque</span></a>
+                <a href="../park.php"><span>Parque</span></a>
             </div>
 
             <div class="enlace">
@@ -149,9 +149,7 @@ if (!empty($_SESSION["name"])) {
         <div class="container-top">
 
             <div class="title-top">
-                <h6>Bienvenid@
-                    <?php echo $_SESSION['name'] . ' ' . $_SESSION['surname']; ?>
-                </h6>
+                <h6>Lectura General</h6>
                 <small>Monitorea metricas clave. Consulta Informes y analiza la informacion</small>
             </div>
 
@@ -232,7 +230,8 @@ if (!empty($_SESSION["name"])) {
 
                                 <div class="text-start mt-4">
                                     <form action="" method="POST">
-                                        <a href="../CONTROLLER/Export_data.php" name="export" id="export" class="btn btn-dark" value="Submit">Exportar .XLS</a>
+                                        <a href="../CONTROLLER/Export_data.php" name="export" id="export"
+                                            class="btn btn-dark" value="Submit">Exportar .XLS</a>
                                     </form>
                                 </div>
 
