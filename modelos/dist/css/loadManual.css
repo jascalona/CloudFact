@@ -8,6 +8,8 @@
     max-width: 600px;
     margin: 5% auto;
     background: #a5b4f517;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
 article{
@@ -29,5 +31,10 @@ article small{
 }
 
 article label{
+    color: #fff;
+}
+
+article button a{
+    text-decoration: none;
     color: #fff;
 }

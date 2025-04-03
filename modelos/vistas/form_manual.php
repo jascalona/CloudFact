@@ -69,7 +69,7 @@
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Contador Anterior B/N</label>
-                            <input name="CONT_BN" type="number" class="form-control" id="exampleFormControlInput1"
+                            <input name="CONT_ANTE_BN" type="number" class="form-control" id="exampleFormControlInput1"
                                 required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
                                 value="0">
                         </div>
@@ -77,40 +77,41 @@
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Contador Actual B/N</label>
-                            <input name="CONT_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
+                            <input name="CONT_ACTU_BN" type="number" class="form-control" id="exampleFormControlInput1"
                                 required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
                                 value="0">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Volumen B/N</label>
-                            <input name="CONT_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
+                            <input name="VOLUM_BN" type="number" class="form-control" id="exampleFormControlInput1"
                                 required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
                                 value="0">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Contador Anterior Color</label>
-                            <input name="CONT_BN" type="number" class="form-control" id="exampleFormControlInput1"
+                            <input name="CONT_ANTE_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
                                 required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
                                 value="0">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Contador Actual Color</label>
-                            <input name="CONT_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
+                            <input name="CONT_ACTU_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
                                 required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
                                 value="0">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Volumen Color</label>
-                            <input name="CONT_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
+                            <input name="VOLUM_COLOR" type="number" class="form-control" id="exampleFormControlInput1"
                                 required placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050"
                                 value="0">
                         </div>
 
                         <div class="btn-carga">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="http://localhost/cloudfact/Components/load_general.php">Close</a></button>
                             <button type="submit" class="btn btn-dark" name="carga" value="submit">Cargar Lecturas</button>
                         </div>
 
