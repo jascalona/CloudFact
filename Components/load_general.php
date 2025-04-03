@@ -225,6 +225,13 @@ if (!empty($_SESSION["name"])) {
                                 </form>
 
                                 <hr>
+
+                                <h4>Carga Manual</h4>
+                                <p>Realice la carda de lecturas manual</p>
+                                <a href="../modelos/vistas/form_manual.php" data-bs-toggle="tooltip"
+                                title="Tooltip">Realizar Carga</a>
+
+                                <hr>
                                 <h4>Exportar .XLS</h4>
                                 <p>Exportar Lecturas Globales</p>
 

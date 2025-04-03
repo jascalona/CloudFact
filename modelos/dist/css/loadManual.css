@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-load-manual{
+    max-width: 600px;
+    margin: 5% auto;
+    background: #a5b4f517;
+}
+
+article{
+    padding: 50px;
+}
+
+article .cont-top{
+    color: #fff;
+    text-align: center;   
+    padding: 10px;
+}
+
+article h6{
+    font-size: 35px;
+}
+
+article small{
+    font-size: 15px;
+}
+
+article label{
+    color: #fff;
+}
