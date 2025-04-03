@@ -256,6 +256,8 @@ if (!empty($_SESSION["name"])) {
                             <th scope="col">Cont. Color Install</th>
                             <th scope="col">Observaciones</th>
                             <th scope="col">DOC</th>
+                            <th scope="col"><i class='bx bx-edit-alt'></i></th>
+
                         </tr>
                     </thead>
 
@@ -270,15 +272,15 @@ if (!empty($_SESSION["name"])) {
                                 <td>
                                     <?= $datos->CLIENT ?>
                                 </td>
-                                
+
                                 <td>
                                     <?= $datos->RIF ?>
                                 </td>
-                                
+
                                 <td>
                                     <?= $datos->SERI ?>
                                 </td>
-                                
+
                                 <td>
                                     <?= $datos->MODEL ?>
                                 </td>
@@ -302,17 +304,23 @@ if (!empty($_SESSION["name"])) {
                                 <td>
                                     <?= $datos->CONT_INSTA_BN ?>
                                 </td>
-                                
+
                                 <td>
                                     <?= $datos->CONT_INSTA_COLOR ?>
                                 </td>
-                                
+
                                 <td>
                                     <?= $datos->OBSER ?>
                                 </td>
-                                
+
                                 <td>
                                     <?= $datos->DOC ?>
+                                </td>
+
+                                <td>
+                                    <button class="btn btn-dark">
+                                        <a style="color: #fff;" href="./modelos/vistas/edit.php?ID=<?= $datos->ID ?>"><i class='bx bx-edit-alt'></i></a>
+                                    </button>
                                 </td>
 
                             </tr>

@@ -1,0 +1,25 @@
+article{
+    background: #a5b4f517;
+    max-width: 600px;
+    margin: 2% auto;
+    color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+article h6{
+    font-size: 35px;
+}
+
+article small{
+    font-size: 15px;
+}
+
+article label{
+    color: #fff;
+}
+
+article button a{
+    text-decoration: none;
+    color: #fff;
+}
