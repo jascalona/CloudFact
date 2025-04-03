@@ -11,3 +11,18 @@
     min-height: 500px;
     box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
 }
+
+.container-graficos-reading .row{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/*DASHBOARD FOR SESION READING*/
+.container-graficos-reading .chart{
+    border-radius: 10px;
+    background: #fff;
+    width: 500px;
+    min-height: 350px;
+    box-shadow: 0 1px 10px rgba(83, 82, 82, 0.446);
+}

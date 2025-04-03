@@ -95,7 +95,7 @@ if (!empty($_SESSION["name"])) {
         <!-- INPUT SEARCH -->
         <div class="perfil-user">
             <a href="../edit_user.php">
-                <img src="./images/icons/perfil.png" alt="">
+                <img src="../images/icons/perfil.png" alt="">
             </a>
             <br>
             <div class="text">
@@ -201,7 +201,7 @@ if (!empty($_SESSION["name"])) {
                             <div class="modal-body">
 
                                 <h4>Descargar Plantillas</h4>
-                                <p>Aquí puede descargar la Plantilla de Importación <a href="·" data-bs-toggle="tooltip"
+                                <p>Aquí puede descargar la Plantilla de Importación <a href="../BULK_LOAD_FILES_FOR_READING.csv" data-bs-toggle="tooltip"
                                         title="Tooltip">Descargar</a></p>
 
                                 <hr>

@@ -54,9 +54,9 @@ foreach ($lineas as $linea) {
             '$CONT_ACTU_COLOR'
         )";
         mysqli_query($conexion, $insertar);
-    } else {
+    } /*else {
         echo '<script>alert("¡Upps, lo siento! has cargado un documento sin registros, por favor rectifique y vuela a intentarlo")</script>';
-    }
+    } */
 
     '<div>' . $i . "). " . $linea . '</div>';
     $i++;
