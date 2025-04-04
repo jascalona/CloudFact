@@ -2,8 +2,8 @@
 
 $conexion = mysqli_connect('localhost', 'root', '', 'gxdeve_apps', '3306');
 
-$id = $_GET['ID'];
-$sql = $conexion->query(" SELECT *FROM m_user_lg WHERE id=$id ");
+$ID = $_GET['ID'];
+$sql = $conexion->query(" SELECT *FROM park_sgd WHERE ID=$ID ");
 
 ?>
 
@@ -88,6 +88,8 @@ $sql = $conexion->query(" SELECT *FROM m_user_lg WHERE id=$id ");
         //    include "../CONTROLLER/modification_r.php";
             while ($datos = $sql->fetch_object()) { ?>
 
+                <?php include ("./modification.php");?>
+
                 <form action="" method="POST">
 
 
@@ -117,8 +119,8 @@ $sql = $conexion->query(" SELECT *FROM m_user_lg WHERE id=$id ");
 
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Direccion Exacta</label>
-                        <textarea name="LOCATION" class="form-control" id="exampleFormControlTextarea1" rows="3" required
-                            placeholder="Ingrese Ubicacion del Equipo" value="<?= $datos->LOCATION ?>"></textarea>
+                        <input name="LOCATION" class="form-control" id="exampleFormControlInput1" rows="3" required
+                            placeholder="Ingrese Ubicacion del Equipo" value="<?= $datos->LOCATION ?>">
                     </div>
 
                     <div class="mb-3">
@@ -130,7 +132,7 @@ $sql = $conexion->query(" SELECT *FROM m_user_lg WHERE id=$id ");
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Fecha de Instalacion</label>
-                        <input name="DATE" type="TEXtext" class="form-control" id="exampleFormControlInput1" 
+                        <input name="DATE_INSTA" type="TEXtext" class="form-control" id="exampleFormControlInput1" 
                         value="<?= $datos->DATE_INSTA ?>" placeholder="Ingrese Fecha"
                             required>
                     </div>
@@ -161,8 +163,8 @@ $sql = $conexion->query(" SELECT *FROM m_user_lg WHERE id=$id ");
 
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Observaciones:</label>
-                        <textarea name="OBSER" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            placeholder="Agrege un comentario (Opcional) " required value="<?= $datos->OBSER ?>" ></textarea>
+                        <input name="OBSER" class="form-control" id="exampleFormControlInput1" rows="3"
+                            placeholder="Agrege un comentario (Opcional) " required value="<?= $datos->OBSER ?>" >
                     </div>
 
                     <div class="mb-3">
@@ -179,7 +181,7 @@ $sql = $conexion->query(" SELECT *FROM m_user_lg WHERE id=$id ");
                 <div class="btn-carga">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a
                             href="http://localhost/cloudfact/park.php">Volver</a></button>
-                    <button type="submit" class="btn btn-dark" name="edit" value="submit">Cargar</button>
+                    <button type="submit" class="btn btn-dark" name="edit" value="submit">Guardar Cambios</button>
                 </div>
 
             </form>

@@ -126,12 +126,12 @@ if (!empty($_SESSION["name"])) {
 
             <div class="enlace">
                 <i class='bx bx-data'></i>
-                <a href="./install.php"><span>Instalaciones</span></a>
+                <a href="../install.php"><span>Instalaciones</span></a>
             </div>
 
             <div class="enlace">
                 <i class='bx bx-message-square-x'></i>
-                <a href="./disincorporation.php"><span>Desincorporación</span></a>
+                <a href="../disincorporation.php"><span>Desincorporación</span></a>
             </div>
 
             <div class="enlace">
